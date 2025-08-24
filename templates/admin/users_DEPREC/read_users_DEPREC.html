@@ -1,0 +1,54 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Admin: Leer Usuarios{% endblock %}
+
+{% block dashboard_content %}
+
+<!-- 🔧 Franja de control superior -->
+<div class="control-bar">
+
+  <h5 class="control-bar-title">
+    <img src="{{ url_for('static', filename='icons/users-white.svg') }}" alt="Usuarios" class="title-icon">
+    Gestión de Usuarios
+  </h5>
+
+  <button class="button-link back-btn" data-back="/">
+    <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="button-icon">
+    Regresar
+  </button>
+
+  <button id="btnAddUser" class="button button-success">
+    <img src="{{ url_for('static', filename='icons/user-plus-white.svg') }}" alt="User" class="button-icon">
+    Agregar Usuario
+  </button>
+
+</div>
+
+<!-- ✅ Envoltorio para scroll opcional -->
+<div class="table-wrapper">
+
+  <!-- 🔹 Aviso opcional para móviles -->
+  <div class="scroll-warning">
+    📱 Desliza a la derecha para ver toda la tabla →
+  </div>
+
+  <!-- 🔸 Contenedor para Tabulator -->
+  <div id="user-table" class="tabulator-container"></div>
+
+</div>
+
+<!-- 🧩 Modal de creación de usuario -->
+{% include "admin/users/create_users.html" %}
+
+<!-- 🧩 Modal de asignación de plan -->
+{% include "admin/users/select_plans.html" %}
+
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+  <script src="{{ url_for('static', filename='luxon/luxon.min.js') }}?v={{ ASSET_VERSION }}"></script>
+  <script src="{{ url_for('static', filename='js/admin/users/read_users.module.js') }}?v={{ ASSET_VERSION }}" type="module"></script>
+  <script src="{{ url_for('static', filename='js/admin/users/inline_users_actions.module.js') }}?v={{ ASSET_VERSION }}" type="module"></script>
+{% endblock %}
+

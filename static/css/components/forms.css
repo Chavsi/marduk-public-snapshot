@@ -1,0 +1,76 @@
+/* ===============================================
+✅ FORMS
+================================================== */
+/* Form Base */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: var(--pad-8);
+  padding-bottom: var(--pad-0);
+}
+
+.form-title {
+  color: var(--on-white);
+  margin-top: var(--mg-0);
+  margin-bottom: var(--mg-20);
+}
+
+.from.dark {
+  background: var(--bg-dk-lead);
+  color: var(--on-dark);
+}
+
+
+/* Variaciones */
+.form.horizontal {
+  flex-direction: column;
+  gap: var(--gap-4);
+}
+
+.form.vertical {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-10);
+}
+
+.link-highlight {
+  color: var(--on-white);
+}
+
+.form.dark { background-color: var(--bg-dk-lead); color: var(--on-dark);}
+
+/* Caja de advertencia */
+.warning-box {
+  background: rgba(255, 193, 7, 0.1); /* ámbar suave */
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 12px 0 16px;
+}
+
+/* Grupos de formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0 16px;
+}
+
+/* Error cerca del submit */
+.form-error {
+  margin: 6px 0 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(220, 53, 69, 0.12); /* rojo suave */
+  border: 1px solid rgba(220, 53, 69, 0.4);
+  color: #ff6b77;
+  font-size: 0.95rem;
+}
+
+/* Botón peligro deshabilitado (por si lo usas desde JS) */
+.button-danger:disabled,
+.button-danger[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

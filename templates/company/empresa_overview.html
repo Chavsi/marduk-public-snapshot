@@ -1,0 +1,103 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Empresa Activa{% endblock %}
+
+{% block dashboard_content %}
+
+<div class="control-bar">
+  <h5 class="control-bar-title">
+    <img src="{{ url_for('static', filename='icons/building-white.svg') }}" alt="Empresa" class="btn-icon">
+    Perfil de Empresa Activa
+  </h5>
+
+  <button class="button-link back-btn" data-back="/">
+    <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="btn-icon">
+    Regresar
+  </button>
+  <a class="button button-warning" href="/company/list">
+      <img src="{{ url_for('static', filename='icons/change-black.svg') }}" alt="Cambiar de empresa" class="btn-icon">
+      Cambiar empresa
+  </a>
+  <a class="button button-success" href="/company/setup/setup_empresa">
+      <img src="{{ url_for('static', filename='icons/add-item-white.svg') }}" alt="Crear empresa" class="btn-icon">
+      Crear empresa
+  </a>   
+</div>
+
+<div class="box autofit dark left">
+  
+  <div class="overview-bar">
+    <div class="row horizontal">
+      
+      <label class="label dark md left">
+        <img src="{{ url_for('static', filename='icons/building-white.svg') }}" alt="Empresa" class="nav-icon">
+        Empresa activa:
+      </label>
+      
+      <div class="label xl left data">{{ empresa.name or "Ninguna" }}</div>
+
+      <a class="button button-secondary" href="/assets/models-views/view-list">
+          <img src="{{ url_for('static', filename='icons/catalogs-white.svg') }}" alt="Lista de catálogos" class="btn-icon">
+          Ver todos los catálogos
+      </a>       
+    </div>
+    
+    <div class="row horizontal top">
+      <label class="label dark md left">
+        <img src="{{ url_for('static', filename='icons/index-white.svg') }}" alt="Descripcion Empresa" class="nav-icon">
+        Descripcion:
+      </label>
+      
+      <div id="note-display" class="label xl left data">{{ empresa.note or "---" }}</div>
+      
+      <textarea id="note-edit" class="input note hidden">{{ empresa.note }}</textarea>
+      
+      <button id="edit-note-btn" class="button button-warning bt-186">
+        <img src="{{ url_for('static', filename='icons/pen-black.svg') }}" alt="Editar" class="btn-icon">
+        Editar nota
+      </button>
+    
+      <button id="save-note-btn" class="button button-success hidden bt-186">
+        <img src="{{ url_for('static', filename='icons/save-white.svg') }}" alt="Guardar" class="btn-icon">
+        Guardar
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="company-grid">
+  
+  <div class="company-catalogs">
+    <div class="row horizontal">
+      <h4 class="box-title-white">
+        <img src="{{ url_for('static', filename='icons/catalogs-white.svg') }}" alt="Empresa" class="title-icon">
+        Catálogos de Sistema Precargados
+      </h4>
+      
+    </div>
+    
+    <div class="catalogos-grid">
+      {% for group, models in catalog_groups.items() %}
+        <div class="catalog-group">
+          <h5 class="box-title-white">{{ group }}</h5>
+          <ul class="company-list">
+            {% for item in models %}
+              <li class="company-item">
+                <a href="{{ url_for('assets.view_tenant_model_table', model_name=item.key) }}">
+                  {{ item.emoji }} {{ item.label }}: {{ item.count }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>  
+</div>  
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+<script src="{{ url_for('static', filename='js/company/company_edit.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}

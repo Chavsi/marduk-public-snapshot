@@ -1,0 +1,396 @@
+/* ✅ ROOT Colors & Styling */
+:root {
+    /* ✅ Backgrounds */
+    /* BLACK */
+    --bg-black: #000000;
+    --text-black: #000000;
+
+    /* WHITE */
+    --bg-white: #ffffff;
+    --bg-white-deco: #C7E2FF;
+    --hover-white: #d6d6d6;
+    --text-white: #ffffff;
+    --on-white: #0360CA;
+
+    /* FLASH LIGHT */
+    --flash-light: #C7E2FF;
+    --on-flash-light: #0c5460;
+
+    /* TRANSPARENT */
+    --bg-transparent: transparent;
+    --hover-transparent: rgba(255, 255, 255, 0.05);
+    --text-transparent: rgba(255, 255, 255, 0.05);
+    --on-transparent: #0360CA; /* ?????? */
+
+    /* GRAY */
+    --bg-gray: #e0e0e0;       /* PRIMARY BG */
+    --bg-gray-deco: #cccccc;
+    --hover-gray: #a1a1a1;
+    --text-gray: #e0e0e0;
+    --on-gray: #0360CA;
+
+    /* LITE GRAY */
+    --bg-lt-gray: #eeeeee;
+    --bg-lt-gray-deco: #a1a1a1;
+
+    /* DARK GRAY */
+    --bg-dk-gray: #767676;
+    --bg-dk-gray-deco: #555555;
+    --hover-dk-gray: #a1a1a1;
+
+    /* LEAD */
+    --bg-lead: #505050;
+    --bg-lead-deco: #313131;
+
+    /* DARK LEAD*/
+    --bg-dk-lead: #222222;
+    --bg-dk-lead-deco: #757775;
+
+    /* DIESEL */
+    --bg-diesel: #546e7a;
+    --bg-diesel-deco: #37474f;
+
+    /* DARK DIESEL */
+    --bg-dk-diesel: #1f2937;
+    --bg-dk-diesel-deco: #4a5568;
+
+    /* DISABLED */
+    --bg-disabled: #ffffff33;
+    --hover-disbled: #ffffff33; 
+    --on-disabled: #ffffff33;
+    --text-disabled: #ffffff33;
+
+    /* MUTED */
+    --bg-muted: #ffffff33;
+    --hover-muted: #ffffff33;
+    --on-muted: #ffffff33;
+    --text-muted: #ffffff33;
+    --label-muted: #d0d0d0;
+
+    /* DARK */
+    --bg-darkmode-deco: #1E1E1E;
+    --bg-card: #1E1E1E;
+    --bg-darkmode:#0f0f0f;
+    --bg-dark: #040404;
+    --on-dark: #ffffff;
+
+    /* BLUE */
+    --bg-blue: #0360CA;  /* OK */
+
+    --bg-blue-deco:#0056b3;
+    --hover-blue: #01387D;
+    --text-blue: #0360CA;
+    --on-blue: #ffffff;
+
+    /* DARK BLUE */
+    --bg-dk-blue: #1670F3;
+    --bg-dk-blue-deco: #0a58ca;
+    --hover-dk-blue: #007BFF;
+    --on-dk-blue: #ffffff;
+
+    --bg-lt-blue: #C7E2FF;
+
+
+
+    /* GREEN */
+    --bg-green: #1D723B;  /* OK */
+
+    --bg-green-deco: #008762;
+    --hover-green: #155724;
+    --on-green: #FFFFFF;
+
+    --bg-lt-green: #86fc76;
+    --on-lt-green: #155724;
+    --bg-lt-green-deco: #26a69a;
+
+    /* DARK GREEN */
+    --bg-dk-green: #008760;
+
+    /* TEAL */
+    --bg-teal: #1abc9c;
+    --bg-teal-deco: #148f77;
+    --hoover-teal: #00c28f;
+    --on-teal: #000000;
+
+    /* TEAL LITE*/
+    --bg-lt-teal: #00DFA2;
+    --bg-lt-teal-deco: #00EBAC;
+
+    /* TEAL DARK */
+    --bg-dk-teal: #168571;
+    --bg-dk-teal-deco: #12856F;
+    --hover-dk-teal: #00A278;
+
+    /* RED */
+    --bg-red: #CA0000;  /* OK */
+
+    --bg-red-deco: #E32C28;
+    --hover-red: #b00020;
+    --text-red: #ff3333;
+    --on-red: #FFFFFF;
+
+    --bg-lt-red: #ff858f; 
+    --on-lt-red: #b00020;
+    --bg-lt-red-deco: #c62828;
+
+    /* DARK RED */
+    --bg-dk-red: #EE0000;
+    --bg-dk-red-deco: #E53935;
+
+    /* CORAL */
+    --bg-coral: #ff6f61;
+    --bg-coral-deco: #c0392b;
+    --hover-coral: #e85c50;
+    --on-coral: #FFFFFF;
+
+    /* DARK CORAL */
+    --bg-dk-coral: #ff6464;
+
+    /* YELLOW */
+    --bg-yellow: #f0c419;
+
+    --bg-yellow-alt: #f0c419;
+    --bg-yellow-deco: #b58d00;
+
+    --hover-yellow: #b58d00;
+
+    --on-yellow: #000000;
+
+    /* FLASH YELLOW */
+    --flash-yellow: #fff3cd;
+    --on-flash-yellow: #856404;
+
+    /* DARK YELLOW */
+    --bg-dk-yellow: #947100;
+    --bg-dk-yellow-deco: #937200;
+
+    /* GOLD */
+    --gold: #787857;
+
+    --bg-purple: #9b59b6;
+    --bg-purple-deco: #742b91;
+
+    /* ✅ Text Colors */
+    --text-input: #000000;
+    --text-data: #000000;
+    --text-decorator: #CCCCCC;
+    --text-invert: #ffffff;
+    --text-placeholder: #00000033;
+
+    /* ✅ Text on color backgrounds */
+    --on-placeholder: #00000033;
+    --on-flash: #000000;
+
+    /* ✅ Borders & Shadows */
+    --border-color: #CCCCCC;
+    --border-input: #000000;
+    --box-shadow: 0rem 0.25rem 0.375rem #ffffff33;
+
+    /* ✅ Overlay / Transparencia */
+    --overlay-05: rgba(0, 0, 0, 0.05);
+    --overlay-1: rgba(0, 0, 0, 0.1);
+    --overlay-2: rgba(0, 0, 0, 0.2);
+    --overlay-3: rgba(0, 0, 0, 0.3);
+    --overlay-4: rgba(0, 0, 0, 0.4);
+    --overlay-5: rgba(0, 0, 0, 0.5);
+    --overlay-6: rgba(0, 0, 0, 0.6);
+    --overlay-light: rgba(255, 255, 255, 0.5);
+
+    /* ✅ Action Colors Hoover */
+    --primary-hover: var(--hover-white);
+    --secondary-hover: var(--hover-blue);
+    --success-hover: var(--hover-green);
+    --warning-hover: var(--hover-yellow);
+    --danger-hover: var(--hover-red);
+
+    /* ✅ Button Colors */   
+    --button-primary: var(--bg-white);
+    --button-secondary: var(--bg-blue);
+    --button-success: var(--bg-green);
+    --button-warning: var(--bg-yellow);
+    --button-danger: var(--bg-red);
+    --button-disabled: var(--bg-disabled);
+
+    /* ✅ Label Colors */
+    --label-primary: var(--bg-white);
+    --label-secondary: var(--bg-blue); 
+    --label-success: var(--bg-green);
+    --label-warning: var(--bg-yellow);
+    --label-danger: var(--bg-red);
+
+    /* ✅ Font Sizes (escala estándar web) */
+    --font-10: 0.625rem;      /* 10px */
+    --font-12: 0.75rem;       /* 12px */
+    --font-14: 0.875rem;      /* 14px */
+    --font-16: 1rem;          /* 16px */
+    --font-18: 1.125rem;      /* 18px */
+    --font-20: 1.25rem;       /* 20px */
+    --font-24: 1.5rem;        /* 24px */
+    --font-26: 1.625;         /* 26px */
+    --font-28: 1.75rem;       /* 28px */
+    --font-30: 1.875rem;
+    --font-31: 1.9375rem;
+    --font-32: 2rem;          /* 32px */
+    --font-40: 2.5rem;        /* 40px */
+    --font-48: 3rem;          /* 48px */
+    --font-12media: 0.75rem;  /* 12px */
+
+    /* ✅ Font Weights */
+    --bold-400: 400;
+    --bold-500: 500;
+    --bold-600: 600;
+    --bold-700: 700;
+    --bold-800: 800;
+
+    /* ✅ Spacing uso for margins*/
+    --spacing-xxs: 0.25rem;  /* 4px  */
+    --spacing-xs: 0.5rem;    /* 8px  */
+    --spacing-sm: 0.75rem;   /* 12px */
+    --spacing-md: 1rem;      /* 16px */
+    --spacing-lg: 1.25rem;   /* 20px */
+    --spacing-xl: 1.5rem;    /* 24px */
+
+    /* ✅ Border Width */
+    --border-05: 0.5px;
+    --border-1: 1px;
+    --border-2: 2px;
+    --border-4: 4px;
+
+    /* ✅ Border Radius */
+    --radius-0: 0rem;            /* 0px  */
+    --radius-2: 0.125rem;        /* 2px  */
+    --radius-4: 0.25rem;         /* 4px  */
+    --radius-8: 0.5rem;          /* 8px  */
+    --radius-6: 0.375rem;        /* 6px  */
+    --radius-10: 0.625rem;       /* 10px */
+    --radius-12: 0.75rem;        /* 12px */
+    --radius-14: 0.85rem;        /* 14px */
+    --radius-16: 1rem;           /* 16px */
+    --radius-20: 1.25rem;        /* 20px */
+    --radius-24: 1.5rem;         /* 24px */
+    --radius-32: 2rem;           /* 32px */
+    --radius-40: 2.5rem;         /* 40px */
+    --radius-64: 4rem;           /* 64px */
+    --radius-10media: 0.625rem;  /* 10px */
+
+    /* ✅ Gap - Espacios */
+    --gap-0: 0rem;            /* 0px  */
+    --gap-2: 0.125rem;        /* 2px  */
+    --gap-4: 0.25rem;         /* 4px  */
+    --gap-8: 0.5rem;          /* 8px  */
+    --gap-10: 0.625rem;       /* 10px */
+    --gap-12: 0.75rem;        /* 12px */
+    --gap-14: 0.85rem;        /* 14px */
+    --gap-16: 1rem;           /* 16px */
+    --gap-20: 1.25rem;        /* 20px */
+    --gap-24: 1.5rem;         /* 24px */
+    --gap-32: 2rem;           /* 32px */
+    --gap-40: 2.5rem;         /* 40px */
+    --gap-48: 3rem;           /* 48px */
+    --gap-64: 4rem;           /* 64px */
+
+    /* ✅ Margin - Márgenes */
+    --mg-0: 0rem;             /* 0px  */
+    --mg-2: 0.125rem;         /* 2px  */
+    --mg-4: 0.25rem;          /* 4px  */
+    --mg-6: 0.375rem;         /* 6px  */
+    --mg-8: 0.5rem;           /* 8px  */
+    --mg-10: 0.625rem;        /* 10px */
+    --mg-12: 0.75rem;         /* 12px */
+    --mg-14: 0.85rem;         /* 14px */
+    --mg-16: 1rem;            /* 16px */
+    --mg-18: 1.125rem;        /* 18px */
+    --mg-20: 1.25rem;         /* 20px */
+    --mg-24: 1.5rem;          /* 24px */
+    --mg-28: 1.75rem;         /* 28px */
+    --mg-32: 2rem;            /* 32px */
+    --mg-36: 2.25rem;         /* 36px */
+    --mg-40: 2.5rem;          /* 40px */
+    --mg-48: 3rem;            /* 48px */
+    --mg-64: 4rem;            /* 64px */
+    --mg-72: 4.5rem;          /* 72px */
+    --mg-80: 5rem;            /* 80px */
+    --mg-88: 5.5rem;          /* 88px */
+    --mg-96: 6rem;            /* 96px */
+
+    /* ✅ Padding - Espaciado interno */
+    --pad-0: 0rem;            /* 0px  */
+    --pad-2: 0.125rem;        /* 2px  */
+    --pad-4: 0.25rem;         /* 4px  */
+    --pad-6: 0.375rem;        /* 6px  */
+    --pad-8: 0.5rem;          /* 8px  */
+    --pad-10: 0.625rem;       /* 10px */
+    --pad-12: 0.75rem;        /* 12px */
+    --pad-14: 0.85rem;        /* 14px */
+    --pad-16: 1rem;           /* 16px */
+    --pad-20: 1.25rem;        /* 20px */
+    --pad-24: 1.5rem;         /* 24px */
+    --pad-32: 2rem;           /* 32px */
+    --pad-40: 2.5rem;         /* 40px */
+    --pad-64: 4rem;           /* 64px */
+    --pad-72: 4.5rem;         /* 72px  */ 
+    --pad-80: 5rem;           /* 80px  */
+    --pad-128: 8rem;          /* 128px */
+    --pad-10media: 0.625rem;  /* 10px  */
+
+    /* ✅ Padding vertical - Espaciado vertical */
+    --pad-inline-0: 0rem;            /* 0px  */
+    --pad-inline-4: 0.25rem;         /* 4px  */
+    --pad-inline-8: 0.5rem;          /* 8px  */
+    --pad-inline-10: 0.625rem;       /* 10px */
+    --pad-inline-12: 0.75rem;        /* 12px */
+    --pad-inline-16: 1rem;           /* 16px */
+    --pad-inline-20: 1.25rem;        /* 20px */
+    --pad-inline-24: 1.5rem;         /* 24px */
+    --pad-inline-32: 2rem;           /* 32px */
+    --pad-inline-40: 2.5rem;         /* 40px */
+    --pad-inline-64: 4rem;           /* 64px */
+    --pad-inline-10media: 0.625rem;  /* 10px */
+
+    /* ✅ Padding horizontal - Espaciado horizontal */
+    --padding-block: 0.5rem;         /* 8px */
+    --padding-block-media: 0.25rem;  /* 4px */ 
+
+    /* ✅ Padding - Espaciado interno x/y */
+    --pad-2x4: 0.125rem 0.25rem;      /* 2px 4px     */
+    --pad-2x8: 0.125rem 0.5rem;       /* 2px 8px     */ 
+    --pad-4x4: 0.25rem 0.25rem;       /* 4px 4px     */
+    --pad-4x8: 0.25rem 0.5rem;        /* 4px 8px     */
+    --pad-4x10: 0.25rem 0.625rem;     /* 4px 10px    */
+    --pad-4x12: 0.25rem 0.75rem;      /* 4px 12px    */
+    --pad-4x14: 0.25rem 0.85rem;      /* 4px 14px    */
+    --pad-4x16: 0.25rem 1rem;         /* 4px 16px    */
+    --pad-6x10: 0.375rem 0.625rem;    /* 4px 10px    */
+    --pad-6x12: 0.375rem 0.75rem;     /* 6px 12px    */ 
+    --pad-8x16: 0.5rem 1rem;          /* 8px 16px    */
+    --pad-12x16: 0.75rem 1rem;        /* 12px 16px   */
+    --pad-12x20: 0.75rem 1.25rem      /* 12px 20px   */
+    --pad-16x32: 1rem 2rem;           /* 16px 32px   */
+    --pad-media2x8: 0.125rem 0.5rem;  /* 2px 8px     */
+    --pad-mini64x32: 0.2rem 0.4rem;   /* 3.2px 6.4px */
+
+    /* ✅ Padding combinados */
+    --padding-vh-sm: 0.5rem 1rem;         /* 8px 16px  */
+    --padding-vh-md: 0.75rem 1.25rem;     /* 12px 20px */
+    --padding-vh-lg: 1rem 2rem;           /* 16px 32px */
+    --padding-vh-media: 0.5rem 0.625rem;  /* 8px 10px  */
+
+    /* ✅ Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-loose: 1.6;
+
+    /* ✅ Outline (focus visual) */
+    --outline-color: #cccccc;   /* o cualquier otro color de foco */
+    --outline-width: 0.125rem;  /* 2px */
+    --outline-offset: 0.125rem;
+
+    --depth: 600px;
+    --width: 500px;
+    --height: 60px;
+
+    --half-depth: 300px;
+    --half-height: 30px;
+    --half-width: 250px;
+}
+

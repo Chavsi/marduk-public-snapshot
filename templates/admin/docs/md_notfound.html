@@ -1,0 +1,28 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Documento no encontrado{% endblock %}
+
+{% block dashboard_content %}
+  <section class="section section-secondary">
+    <div class="container is-wide">
+      <div class="box left">
+        <h2 class="title">📄 Documento no disponible</h2>
+        <div class="markdown-body">
+          <p>El documento <strong>{{ filename }}</strong> no se encuentra disponible en este entorno.</p>
+          <p>Es posible que esté reservado para entornos de desarrollo o que haya sido removido.</p>
+        </div>
+
+        <div class="box button-back">
+          <button class="button-link back-btn" data-back="/admin/docs/index">
+            <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="button-icon">
+            Regresar al índice
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}

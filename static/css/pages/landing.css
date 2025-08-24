@@ -1,0 +1,231 @@
+/* Landing Styles */
+/****** ✅ CARDS ******/
+
+.landing-section {
+  /* ✅ Fondo azul (bg-secondary) */
+  background-color: var(--bg-gray);
+  color: var(--on-white);
+  padding-block: var(--pad-8);
+}
+
+@media (max-width: 420px) {
+  .landing-section {
+    gap: var(--gap-16);  /* 1rem = 16px */
+    padding-block: var(--pad-4);
+  }
+}
+
+.landing-intro {
+  text-align: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--mg-8);
+  margin-bottom: var(--mg-48);
+}
+.landing-title {
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  color: var(--on-white);
+  text-align: center;
+  margin-top: var(--mg-12);
+  margin-bottom: var(--mg-12);
+  padding-inline: var(--pad-inline-16);
+}
+
+.landing-intro-1 {
+  text-align: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--mg-32);
+  margin-top: var(--mg-96);
+}
+.landing-title-1 {
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  color: var(--on-white);
+  text-align: center;
+  margin-bottom: var(--mg-12);
+  padding-inline: var(--pad-inline-16);
+}
+
+.landing-intro-2 {
+  text-align: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--mg-24);
+  margin-bottom: var(--mg-8);
+}
+.landing-title-2 {
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  color: var(--on-white);
+  text-align: center;
+  margin-top: var(--mg-12);
+  margin-bottom: var(--mg-4);
+  padding-inline: var(--pad-inline-16);
+}
+
+.service-card {
+  background: var(--bg-blue);
+  color: var(--on-blue);
+  border-radius: var(--radius-16);
+  padding: var(--pad-32);
+  box-shadow: 0 0px 12px var(--overlay-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;   /* 🔥 hace que el card rellene toda su celda */
+  justify-content: center;
+  gap: var(--gap-0);
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 14px rgba(0,0,0,9);
+}
+
+/* CARD COLORS */
+.service-card.default { background: linear-gradient(to bottom, var(--bg-blue), var(--bg-blue-deco)); }
+.service-card.blue-dark { background: linear-gradient(to bottom, var(--bg-dk-blue), var(--bg-dk-blue-deco)); }
+.service-card.teal { background: linear-gradient(to bottom, var(--bg-teal), var(--bg-teal-deco)); }
+.service-card.green { background: linear-gradient(to bottom, var(--bg-green), var(--bg-green-deco)); }
+.service-card.yellow { background: linear-gradient(to bottom, var(--bg-yellow), var(--bg-yellow-deco)); }
+.service-card.coral { background: linear-gradient(to bottom, var(--bg-coral), var(--bg-coral-deco)); }
+.service-card.red { background: linear-gradient(to bottom, var(--bg-red)), var(--bg-red-deco); }
+.service-card.gray-dark { background: linear-gradient(to bottom, var(--bg-dk-gray), var(--bg-dk-gray-deco)); }
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;       /* 🔥 centrado interno */
+  flex-grow: 1;                  /* 🔥 rellena verticalmente */
+  gap: var(--gap-12);            /* más fino que el gap externo */
+  color: var(--on-blue);
+}
+
+.card-image {
+  width: 136px;
+  height: 136px;
+  overflow: hidden;
+  border-radius: var(--radius-4);
+  margin-bottom: var(--mg-0);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;  /* 👈 Esto hace que el título y el párrafo vayan uno debajo del otro */
+  gap: var(--gap-8);       /* Espacio entre h2 y p */
+  position: relative;
+  color: var(--on-blue);
+  text-decoration: none !important;
+}
+
+.card-text h4 {
+  text-decoration: none !important;
+  font-weight: var(--bold-400);
+  color: var(--on-blue);
+}
+
+.card-text p {
+  font-size: var(--font-16);              /* o var(--font-lg) si quieres aún más destacado */
+  color: var(--on-blue);                /* o el color que estés usando para textos */
+  line-height: var(--line-height-normal);
+  text-decoration: none !important;
+  text-align: center;                     /* hereda la dirección natural, usualmente 'left' */
+}
+
+.service-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  color: var(--on-blue);
+  text-decoration: none !important;
+}
+
+.service-card-link * {
+  text-decoration: none !important;
+  color: var(--on-blue);
+}
+
+.service-card-link:focus,
+.service-card-link:active,
+.service-card-link:visited {
+  text-decoration: none !important;
+  color: var(--on-blue);
+}
+
+.service-card-link:hover .service-card {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 20px var(--overlay-1);
+  text-decoration: none !important;
+}
+
+/****** ✅ MEDIA ******/
+@media (max-width: 768px) {
+  .landing-intro {
+    margin-top: var(--mg-4);
+    margin-bottom: var(--mg-32);
+  }
+
+  .landing-intro-1 {
+    margin-top: var(--mg-48);
+    margin-bottom: var(--mg-32);
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  .card-text p {
+    font-size: var(--font-14);   /* reducir solo en móviles */
+  }
+
+  .card-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 420px) {
+  .landing-intro {
+    margin-top: var(--mg-4);
+    margin-bottom: var(--mg-32);
+  }
+
+  .landing-intro-1 {
+    margin-top: -192px;   /* Correcion forzada de [pre perspective */
+    margin-bottom: var(--mg-32);
+  }
+
+  .landing-intro-2 {
+    margin-top: var(--mg-24);
+    margin-bottom: var(--mg-0);
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  .card-text p {
+    font-size: var(--font-14);   /* reducir solo en móviles */
+  }
+
+  .card-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+

@@ -1,0 +1,58 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Mis Empresas{% endblock %}
+
+{% block dashboard_content %}
+
+  <div class="control-bar">
+    <h5 class="control-bar-title">
+      <img src="{{ url_for('static', filename='icons/building-white.svg') }}" alt="Lista de Empresas" class="btn-icon">
+      Listado de Empresas
+    </h5>
+    <button class="button-link back-btn" data-back="/">
+      <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="btn-icon">
+      Regresar
+    </button>
+  </div>
+
+<div class="box autofit dark left">
+  <ul class="company-list">
+    {% for e in empresas %}
+      <li class="company-item">
+        <span class="company-name">{{ e.name }}</span>
+
+        <button
+          class="button button-dark" data-action="select-company" data-company-id="{{ e.id }}">
+          Seleccionar
+        </button>
+
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <div class="box button-layout">
+
+    <a href="/company/overview">
+      <button class="button button-secondary">
+        <img src="{{ url_for('static', filename='icons/building-white.svg') }}" alt="Empresa activa" class="btn-icon">
+        Empresa Activa
+      </button>
+    </a>
+    <a href="/company/setup/setup_empresa">
+      <button class="button button-success">
+        <img src="{{ url_for('static', filename='icons/add-item-white.svg') }}" alt="Crear empresa" class="btn-icon">
+        Crear nueva empresa
+      </button>
+    </a>
+
+  </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+<script src="{{ url_for('static', filename='js/company/select_company.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends "shared/main.html" %}
+
+{% block title %}Caracteristicas:{{ filename }}{% endblock %}
+
+{% block content %}
+  <section class="section section-secondary">
+    <div class="container is-wide">
+      <div class="box middle autofit">
+        <!-- <h2 class="title">📄 {{ filename }}</h2> -->
+        <div class="markdown-body">
+          {{ content|safe }}
+        </div>
+        <div class="box button-back">
+          <button class="button-link back-btn" data-back="/">
+            <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="button-icon">
+            Regresar
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/mds/md_bash_copy.js') }}?v={{ ASSET_VERSION }}"></script>
+<script src="{{ url_for('static', filename='js/mds/mermaid.min.js') }}?v={{ ASSET_VERSION }}"></script>
+<script src="{{ url_for('static', filename='js/mds/initialize_mermaid.js') }}?v={{ ASSET_VERSION }}"></script>
+<script src="{{ url_for('static', filename='js/mds/highlight.min.js') }}?v={{ ASSET_VERSION }}"></script>
+<script src="{{ url_for('static', filename='js/mds/initialize_hightlight.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}

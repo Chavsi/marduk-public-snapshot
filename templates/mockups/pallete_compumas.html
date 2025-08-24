@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Paleta CompuMás</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .light { background: #ffffff; color: #000; }
+    .dark  { background: #040404; color: #fff; }
+
+    .row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .color-box {
+      width: 140px;
+      height: 120px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .label {
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section light">
+    <div class="row">
+      <h2>Basev1</h2>
+      <div class="color-box" style="background:#0056B3">#0056B3<div class="label">Azul Primario</div></div>
+      <div class="color-box" style="background:#00DFA2">#00DFA2<div class="label">Verde Secundario</div></div>
+      <div class="color-box" style="background:#FFD344; color:#000;">#FFD344<div class="label">Amarillo</div></div>
+      <div class="color-box" style="background:#757555">#757555<div class="label">Golden</div></div>
+      <div class="color-box" style="background:#E53935">#E53935<div class="label">Rojo</div></div>
+      <div class="color-box" style="background:#757775">#757775<div class="label">Gris OK</div></div>
+      <div class="color-box" style="background:#757775">#757775<div class="label">Gris OK</div></div>
+      <div class="color-box" style="background:#757775">#757775<div class="label">Gris OK</div></div>
+      <div class="color-box" style="background:#757775">#757775<div class="label">Gris OK</div></div>
+    </div>
+  </div>
+
+  <div class="section light">
+    <h2>Sobre Fondo Blanco FFFFFF</h2>
+
+    <div class="row">
+      <h2>Lightv2</h2>
+      <div class="color-box" style="background:#0075E3">#0075E3<div class="label">Azul OK</div></div>
+      <div class="color-box" style="background:#008760">#008760<div class="label">Verde OK</div></div>
+      <div class="color-box" style="background:#12856F">#12856F<div class="label">Verde OK</div></div>
+      <div class="color-box" style="background:#D83C3C">#D83C3C<div class="label">Rojo OK</div></div>
+      <div class="color-box" style="background:#767676">#767676<div class="label">Gris OK</div></div>
+    </div>
+
+    <div class="row">
+      <h2>Basev2</h2>
+      <div class="color-box" style="background:#0072ED">#0072ED<div class="label">Azul OK</div></div>
+      <div class="color-box" style="background:#008762">#008762<div class="label">Verde OK</div></div>
+      <div class="color-box" style="background:#12856F">#12856F<div class="label">Verde OK</div></div>
+      <div class="color-box" style="background:#947100; color:#000;">#947100<div class="label">Amarillo OK</div></div>
+      <div class="color-box" style="background:#E32C28">#E32C28<div class="label">Rojo OK</div></div>
+      <div class="color-box" style="background:#757775">#757775<div class="label">Gris OK</div></div>
+    </div>
+
+    <div class="row">
+      <h2>Darkv2</h2>
+      <div class="color-box" style="background:#1670F3">#1670F3<div class="label">Azul Primario OK</div></div>
+      <div class="color-box" style="background:#168571">#168571<div class="label">Verde Secundario OK</div></div>
+      <div class="color-box" style="background:#12856F">#12856F<div class="label">Verde OK</div></div>
+      <div class="color-box" style="background:#937200; color:#000;">#937200<div class="label">Amarillo OK</div></div>
+      <div class="color-box" style="background:#787857">#787857<div class="label">Golden OK</div></div>
+      <div class="color-box" style="background:#EE0000">#EE0000<div class="label">Rojo OK</div></div>
+      <div class="color-box" style="background:#767676">#767676<div class="label">Gris OK</div></div>
+    </div>
+
+  </div>
+
+  <div class="section dark">
+    <h2>Sobre Fondo Oscuro 040404</h2>
+
+    <div class="row">
+      <h2>Lightv2</h2>
+      <div class="color-box" style="background:#0075E3">#0075E3<div class="label">Azul OK</div></div>
+      <div class="color-box" style="background:#008760">#008760<div class="label">Verde OK</div></div>
+      <div class="color-box" style="background:#D83C3C">#D83C3C<div class="label">Rojo OK</div></div>
+      <div class="color-box" style="background:#767676">#767676<div class="label">Gris OK</div></div>
+    </div>
+
+    <div class="row">
+      <h2>Basev2</h2>
+      <div class="color-box" style="background:#0072ED">#0072ED<div class="label">Azul OK</div></div>
+      <div class="color-box" style="background:#008762">#008762<div class="label">Verde OK</div></div>
+      <div class="color-box" style="background:#947100; color:#000;">#947100<div class="label">Amarillo OK</div></div>
+      <div class="color-box" style="background:#E32C28">#E32C28<div class="label">Rojo OK</div></div>
+      <div class="color-box" style="background:#757775">#757775<div class="label">Gris OK</div></div>
+    </div>
+
+    <div class="row">
+      <h2>Darkv2</h2>
+      <div class="color-box" style="background:#1670F3">#1670F3<div class="label">Azul OK</div></div>
+      <div class="color-box" style="background:#168571">#168571<div class="label">Verde OK</div></div>
+      <div class="color-box" style="background:#937200; color:#000;">#937200<div class="label">Amarillo OK</div></div>
+      <div class="color-box" style="background:#787857">#787857<div class="label">Golden OK</div></div>
+      <div class="color-box" style="background:#EE0000">#EE0000<div class="label">Rojo OK</div></div>
+      <div class="color-box" style="background:#767676">#767676<div class="label">Gris claro OK</div></div>
+    </div>
+
+  </div>
+</body>
+</html>

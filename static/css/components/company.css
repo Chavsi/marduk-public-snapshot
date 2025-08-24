@@ -1,0 +1,132 @@
+.empresa-activa-banner {
+  color: var(--bg-white);
+  margin-right: var(--mg-14);
+}
+
+.company-name {
+  font-weight: var(--bold-600);
+  color: var(--text-white);
+  margin-right: 12px;
+}
+
+.company-list {
+  list-style: none;
+  padding-left: var(--pad-14);
+  margin: 0;
+}
+
+.company-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-white);
+  text-decoration: none;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--bg-line, var(--bg-white)); /* si tienes un color base, úsalo */
+}
+
+.company-item a:visited {
+  color: var(--text-white); /* igual al color normal */
+}
+
+.company-grid {
+  display: grid;
+  width: 100%;
+  max-width: 1200px; /* o el ancho que te funcione bien */
+  align-items: start;
+  margin-top: var(--mg-12);
+  margin-bottom: var(--mg-0);
+  margin-left: var(--mg-0);
+  margin-right: var(--mg-0);
+  grid-template-columns: 1fr;
+}
+
+.company-catalogs {
+  background-color: var(--bg-dk-lead); /* o el fondo general que uses en secciones oscuras */
+  border: 1px solid var(--bg-line);
+  border-radius: var(--radius-8);
+  padding: var(--pad-24);
+  margin-bottom: var(--mg-12);
+  box-shadow: var(--shadow-lg, 0 2px 6px rgba(0, 0, 0, 0.2)); /* si usas sombras */
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-4);
+}
+
+.catalogos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--gap-16);
+  margin-top: var(--mg-0);
+}
+
+.catalog-group {
+  background-color: var(--bg-dk-lead);
+  padding-top: var(--pad-0);
+  padding-bottom: var(--pad-0);
+  padding-left: var(--pad-16);
+  padding-right: var(--pad-16);
+  border-radius: var(--radius-8);
+  border: 1px solid var(--bg-line);
+}
+
+.catalog-group h5 {
+  margin-top: var(--mg-8);
+  font-size: 1rem;
+  color: var(--text-white);
+}
+
+.company-item:last-child {
+  border-bottom: none;
+}
+
+
+
+@media (max-width: 420px) {
+  .empresa-activa-banner {
+    color: var(--bg-white);
+    margin-right: var(--mg-0);
+  }
+
+  .company-catalogs {
+    padding: var(--pad-12);
+    gap: var(--gap-16);
+    border-radius: var(--radius-8);
+    margin-bottom: var(--mg-16);
+  }
+
+  .catalogos-grid {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: var(--gap-16);
+  }
+
+  .catalog-group {
+    padding-left: var(--pad-10);
+    padding-right: var(--pad-10);
+    padding-top: var(--pad-6);
+    padding-bottom: var(--pad-6);
+    border-radius: var(--radius-6);
+  }
+
+  .catalog-group h5 {
+    font-size: 0.95rem;
+    margin-top: var(--mg-4);
+  }
+
+  .company-list {
+    padding-left: var(--pad-6);
+  }
+
+  .company-item {
+    flex-direction: column; /* para evitar desbordes si los nombres son largos */
+    align-items: flex-start;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .company-item a {
+    font-size: 0.95rem;
+  }
+}

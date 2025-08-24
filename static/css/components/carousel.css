@@ -1,0 +1,199 @@
+/* ✅ Carrusel */
+.landing-carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 6rem;
+}
+
+.landing-carousel {
+  display: flex;
+  gap: var(--gap-32);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: var(--pad-16);
+  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer and Edge */
+}
+
+.landing-carousel::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari */
+}
+
+.service-box {
+  width: 100%;
+  max-width: 100%;
+  min-height: 400px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  background: linear-gradient(to bottom, var(--bg-white), var(--bg-white-deco));
+  padding: var(--pad-32);
+  border-radius: var(--radius-12);
+  box-shadow: 0 4px 8px var(--overlay-05);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-32);          /* Espacio entre imagen y texto */
+  text-align: left;            /* Para que el texto no quede centrado */
+}
+
+.service-text {
+  display: flex;
+  flex-direction: column;     /* 👈 Esto hace que el título y el párrafo vayan uno debajo del otro */
+  gap: var(--gap-8);          /* Espacio entre h2 y p */
+  position: relative;
+}
+
+.service-text p {
+  font-size: var(--font-20);  /* o var(--font-lg) si quieres aún más destacado */
+  color: var(--on-white);   /* o el color que estés usando para textos */
+  line-height: var(--line-height-normal);
+}
+
+.service-link {
+  margin-top: var(--mg-8);
+  align-self: flex-end;
+  color: var(--on-white);
+  font-size: var(--font-16);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.service-link:hover {
+  color: var(--hover-blue);
+}
+
+.service-box.default { background: linear-gradient(to bottom, var(--bg-blue), var(--bg-blue-deco)); }
+.service-box.green { background: linear-gradient(to bottom, var(--bg-green), var(--bg-green-deco)); }
+.service-box.teal { background: linear-gradient(to bottom, var(--bg-teal),var(--bg-teal-deco)); }
+.service-box.blue-dark { background: linear-gradient(to bottom, var(--bg-dk-blue), var(--bg-dk-blue-deco)); }
+.service-box.yellow { background: linear-gradient(to bottom, var(--bg-yellow-alt), var(--bg-yellow-deco)); }
+.service-box.coral { background: linear-gradient(to bottom, var(--bg-coral), var(--bg-coral-deco)); }
+.service-box.red { background: linear-gradient(to bottom, var(--bg-red)), var(--bg-red-deco); }
+.service-card.gray-dark { background: linear-gradient(to bottom, var(--bg-dk-gray), var(--bg-dk-gray-deco)); }
+
+.service-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 📸 Imagen dentro del Box */
+.service-image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: var(--radius-8);
+  margin-bottom: var(--mg-16);
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ✅ Botones */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bg-blue);
+  color: var(--on-blue);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  font-size: var(--font-24);
+  transition: background-color 0.3s;
+}
+
+.carousel-btn.left {
+  left: 1rem;
+}
+
+.carousel-btn.right {
+  right: 1rem;
+}
+
+.carousel-btn:hover {
+  background-color: var(--hover-blue);
+}
+
+.service-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-title {
+  font-size: var(--font-20);
+  margin-top: var(--mg-16);
+  color: var(--on-blue);
+}
+
+.service-description {
+  font-size: var(--font-16);
+  margin: 1rem 0;
+}
+
+.service-link {
+  color: var(--on-blue);
+  text-decoration: underline;
+}
+
+/****** ✅ MEDIA ******/
+@media (max-width: 420px) {
+  .landing-carousel-container {
+    padding: 1rem 2rem;
+  }
+
+  .container.is-wide {
+    padding-inline: var(--pad-inline-16);  /* o 2rem como máximo */
+  }
+
+  .carousel-btn.left {
+    left: 0.5rem;
+  }
+
+  .carousel-btn.right {
+    right: 0.5rem;
+  }
+
+  .carousel-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: var(--font-24);
+  }
+
+  .service-box {
+    width: 100%;               /* Mejor 100% del contenedor */
+    flex-direction: column;    /* 👈👈👈 Esto es lo que hace que imagen + texto se pongan en columna */
+    align-items: center;       /* Centra el contenido */
+    text-align: center;        /* Textos centrados en móvil */
+  }
+
+  .service-text {
+    align-items: center;       /* Opcional: centra también h2 y p */
+  }
+
+  .service-image {
+    width: 250px;
+    height: 250px;
+    margin-bottom: var(--mg-16);
+  }
+
+  .service-text p {
+    font-size: var(--font-md);  /* Opcional: reducir un poco el tamaño en móvil si quieres */
+    text-align: left;
+  }
+
+  .service-link {
+    align-self: center;        /* ✅ Aquí centramos el link en mobile */
+    margin-top: var(--mg-16);
+  }
+}
+

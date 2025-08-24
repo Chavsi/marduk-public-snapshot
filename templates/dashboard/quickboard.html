@@ -1,0 +1,123 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}{{ titulo_dashboard or "Dashboard" }}{% endblock %}
+
+{% block dashboard_content %}
+
+<div class="control-bar">
+  
+  <h5 class="control-bar-title">
+    <img src="{{ url_for('static', filename='icons/dashboard-white.svg') }}" alt="Dashboard" class="btn-icon">
+    {{ titulo_bienvenida or "Bienvenido al Dashboard" }}
+  </h5>
+  
+  {% if not empresa_activa %}
+    <a href="{{ url_for('company.setup.entrypoint.company_entrypoint') }}" class="button button-success">
+      <img src="{{ url_for('static', filename=icono_boton or 'icons/settings-white.svg') }}" alt="Configurar" class="btn-icon">
+      {{ texto_boton or "Configurar Empresa" }}
+    </a>
+  {% endif %}
+  
+  <button class="button-link back-btn" data-back="/">
+    <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="btn-icon">
+    Regresar
+  </button>
+  
+</div>
+
+<div class="quickboard-grid">
+  <div class="box autofit dark left">
+    
+    <h4 class="box-title-white">{{ titulo_dashboard or "Dashboard" }}</h4>
+    
+    {% if empresa_activa %}
+      <p>Hola <span class="label">{{ current_user.username }}</span>{{ mensaje_empresa_activa or "Aquí se mostrarán accesos rápidos, favoritos, etc." }}</p>
+    {% else %}
+      <p>Hola <span class="label">{{ current_user.username }}</span>{{ mensaje_no_empresa or ", para iniciar, configura tu empresa." }}</p>
+    {% endif %}
+    
+    <div class="grid grid-mini">
+
+      {% if empresa_activa %}
+        <a href="{{ url_for('company.company_views.empresa_overview') }}" class="button bt-left button-dark">
+          <h6 class="box-title-white">
+            <img src="{{ url_for('static', filename='icons/building-white.svg') }}" class="title-icon">
+            Empresa Activa: {{ empresa_nombre  }}
+          </h6>
+        </a>
+        <a href="{{ url_for('assets.list_tenant_models') }}" class="button bt-left button-dark">
+          <h6 class="box-title-white">
+            <img src="{{ url_for('static', filename='icons/catalogs-white.svg') }}" class="title-icon">
+            Ver todos los catálogos
+          </h6>
+        </a>
+      {% else %}
+        <a href="{{ url_for('company.setup.entrypoint.company_entrypoint') }}" class="button {{ boton_estilo or 'button-success' }}">
+          <img src="{{ url_for('static', filename=icono_boton or 'icons/settings-white.svg') }}" alt="Configurar" class="btn-icon">
+          {{ texto_boton or "Configurar Empresa" }}
+        </a>
+      {% endif %}
+      
+      {% if empresa_activa %}
+        {% if total_usuarios is not none %}
+          <a href="{{ url_for('assets.tenant_models_overview_view', model_name='asset_user') }}" class="button bt-left button-dark">
+            <h6 class="box-title-white">
+              <img src="{{ url_for('static', filename='icons/users-white.svg') }}" class="title-icon">
+              Total de usuarios: {{ total_usuarios }}
+            </h6>
+          </a>
+        {% endif %}
+
+        {% if total_pcs is not none %}
+          <a href="{{ url_for('assets.tenant_models_overview_view', model_name='pc') }}" class="button bt-left button-dark">
+            <h6 class="box-title-white">
+              <img src="{{ url_for('static', filename='icons/pcs-white.svg') }}" class="title-icon">
+              Total PCs: {{ total_pcs }}{% if pcs_pct is not none %} ({{ pcs_pct }}%){% endif %}
+            </h6>
+          </a>
+        {% endif %}
+
+        {% if total_celulares is not none %}
+          <a href="{{ url_for('assets.tenant_models_overview_view', model_name='celular') }}" class="button bt-left button-dark">
+            <h6 class="box-title-white">
+              <img src="{{ url_for('static', filename='icons/phone-white.svg') }}" class="title-icon">
+              Total Celulares: {{ total_celulares }}{% if celulares_pct is not none %} ({{ celulares_pct }}%){% endif %}
+            </h6>
+          </a>
+        {% endif %}
+
+        {% if total_perifericos is not none %}
+          <a href="{{ url_for('assets.tenant_models_overview_view', model_name='periferico') }}" class="button bt-left button-dark">
+            <h6 class="box-title-white">
+              <img src="{{ url_for('static', filename='icons/printer-white.svg') }}" class="title-icon">
+              Total Periféricos: {{ total_perifericos }}{% if perifericos_pct is not none %} ({{ perifericos_pct }}%){% endif %}
+            </h6>
+          </a>
+        {% endif %}
+
+        {% if total_dispositivos is not none %}
+          <a href="{{ url_for('assets.tenant_models_overview_view', model_name='device_type') }}" class="button bt-left button-dark">
+            <h6 class="box-title-white">
+              <img src="{{ url_for('static', filename='icons/devices-white.svg') }}" class="title-icon">
+              Total de dispositivos: {{ total_dispositivos }}
+            </h6>
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="box autofit dark left">
+    <h5 class="box-title-white">El sistema esta compuesto por catálogos:</h5>
+    <p> - Catálogos de Sistema fijos para el funcionamiento.</p>
+    <p> - Catálogos Auxiliares precargables y personalizables.</p>
+    <p> - Catálogos de Activos It: Usuarios, Pcs, Celulares, Perifericos, Licencias de Software.</p>
+  </div>
+  
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}

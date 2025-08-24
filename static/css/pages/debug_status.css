@@ -1,0 +1,30 @@
+.debug-chip{
+  display:inline-block;
+  padding:.35rem .6rem;
+  border-radius:999px;
+  background:#0f172a;
+  color:#e2e8f0;
+  font-size:.85rem;
+}
+
+.debug-chip.ok{background:#064e3b}   /* verde */
+.debug-chip.warn{background:#92400e} /* ámbar */
+.debug-chip.err{background:#7f1d1d}  /* rojo */
+
+@media (max-width: 768px){
+  .debug-chip{
+    display:flex;
+    margin-top: var(--mg-6);
+    width: 100%;
+    justify-content:center;
+  }
+}
+
+@media (max-width: 420px){
+  .debug-chip{
+    display:flex;
+    margin-top: var(--mg-6);
+    width: 100%;
+    justify-content:center;
+  }
+}

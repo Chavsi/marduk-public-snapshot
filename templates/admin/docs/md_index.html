@@ -1,0 +1,37 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}📚 Admin Docs{% endblock %}
+
+{% block dashboard_content %}
+
+    <div class="control-bar">
+      <h5 class="control-bar-title">
+        <img src="{{ url_for('static', filename='icons/catalogs-white.svg') }}" alt="Catálogos" class="title-icon">
+        Admin Docs
+      </h5>
+      <button class="button-link back-btn" data-back="/">
+        <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="button-icon">
+        Regresar
+      </button>
+    </div>
+
+    <div class="catalogs-wrapper">
+      {% for section, files in docs_by_section.items() %}
+        <ul class="catalog-links">
+          <li><h5>📁 {{ section }}</h5></li>
+            {% for f in files %}
+              <li>
+                <a href="{{ url_for('admin.md_view_admindocs', filepath=f.slug) }}">
+                  {{ f.title }}
+                </a>
+              </li>
+            {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}

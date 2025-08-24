@@ -1,0 +1,86 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Perfil{% endblock %}
+
+{% block dashboard_content %}
+
+<div class="control-bar">
+  <h5 class="control-bar-title">
+    <img src="{{ url_for('static', filename='icons/edituser-white.svg') }}" alt="Perfil" class="btn-icon">
+    Perfil de Usuario
+  </h5>
+  <button class="button-link back-btn" data-back="/">
+    <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="btn-icon">
+    Regresar
+  </button>
+</div>
+
+<div class="box autofit dark left">
+
+  <form id="ProfileForm" class="form horizontal">
+
+    <div class="row horizontal">
+      <label class="label dark base left" for="name">
+        <img src="{{ url_for('static', filename='icons/user-white.svg') }}" alt="Nombre" class="label-icon">
+        Nombre:
+      </label>
+      <span class="label lg left data" id="name">Cargando...</span>
+    </div>
+
+    <div class="row horizontal">
+      <label class="label dark base left" for="username">
+        <img src="{{ url_for('static', filename='icons/username-white.svg') }}" alt="Usuario" class="label-icon">
+        Usuario:
+      </label>
+      <span class="label lg left data" id="username">Cargando...</span>
+    </div>
+
+    <div class="row horizontal">
+      <label class="label dark base left" for="email">
+        <img src="{{ url_for('static', filename='icons/email-white.svg') }}" alt="Email" class="label-icon">
+        Email:
+      </label>
+      <span class="label lg left data" id="email">Cargando...</span>
+    </div>
+
+    <div class="row horizontal">   
+      <label class="label dark base left" for="phone">
+        <img src="{{ url_for('static', filename='icons/phone-white.svg') }}" alt="Teléfono" class="label-icon">
+        Teléfono:
+      </label>
+      <span class="label lg left data" id="phone">Cargando...</span>
+    </div>
+
+    <div class="row horizontal">
+      <label class="label dark base left" for="address">
+        <img src="{{ url_for('static', filename='icons/address-white.svg') }}" alt="Dirección" class="label-icon">
+        Dirección:
+      </label>
+      <span class="label lg left data" id="address">Cargando...</span>
+    </div>
+
+    <div class="box button-layout">
+      <a href="{{ url_for('user.profile.update') }}" class="button button-warning button-icon">
+        <img src="{{ url_for('static', filename='icons/pen-black.svg') }}" alt="Editar" class="label-icon">
+        Editar
+      </a>
+      <a href="{{ url_for('auth.change_password.change_password') }}" class="button button-success button-icon">
+        <img src="{{ url_for('static', filename='icons/lock-white.svg') }}" alt="Constraseña" class="label-icon">
+        Constraseña
+      </a>
+      <a href="{{ url_for('auth.deactivate.deactivate_account') }}" class="button button-danger button-icon">
+        <img src="{{ url_for('static', filename='icons/warning-white.svg') }}" alt="Desactivar Cuenta" class="label-icon">
+        Desactivar Cuenta
+      </a>
+    </div>
+    
+  </form>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+  <script src="{{ url_for('static', filename='js/auth/profile.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}

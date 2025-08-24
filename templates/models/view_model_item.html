@@ -1,0 +1,37 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Vista item de catalogo{{ title }}{% endblock %}
+
+{% block dashboard_content %}
+
+<div class="control-bar">
+  <h5 class="control-bar-title">
+    <img src="{{ url_for('static', filename='icons/catalogs-white.svg') }}" alt="Catalog Items" class="btn-icon">
+    Catalogos de Sistema
+  </h5>
+  <button class="button-link back-btn" data-back="{{ back_url or '/' }}">
+    <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="btn-icon">
+    Regresar
+  </button>
+</div>
+
+<div class="box autofit dark left">
+  <h5 class="catalog-title">{{ title }}</h5>
+
+  {% for label, key in display_fields %}
+    <div class="row horizontal">
+      <label class="label dark md left">
+        {{ label }}
+      </label>
+      <div class="label lg left data">
+        {{ item[key] }}
+      </div>
+    </div>
+  {% endfor %}
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}

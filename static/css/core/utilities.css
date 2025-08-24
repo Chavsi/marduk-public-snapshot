@@ -1,0 +1,43 @@
+/* ===================================================
+✅ UTILITIES
+=================================================== */
+/* 🔹 Visibilidad */
+.hidden {
+    display: none !important;
+}
+
+/* ✅ Tamaño */
+.full-width { width: 100%; }
+.full-height { height: 100%; }
+
+/* ✅ Overflow */
+.overflow-auto { overflow: auto; }
+.overflow-hidden { overflow: hidden; }
+
+/* ✅ Espaciado común (no obligatorio) */
+.mt-1 { margin-top: var(--mg-12); }
+.mt-2 { margin-top: var(--mg-16); }
+.mt-3 { margin-top: var(--mg-20); }
+.mt-4 { margin-top: var(--mg-24); }
+
+/* Margins horizontales rápidos */
+.mh-20 { margin-inline: var(--mg-20); }
+.mh-24 { margin-inline: var(--mg-24); }
+
+/* ✅ Padding vertical-horizontal */
+.pd-vh-sm { padding: var(--padding-vh-sm); }
+.pd-vh-md { padding: var(--padding-vh-md); }
+.pd-vh-lg { padding: var(--padding-vh-lg); }
+
+/* 🔹 Padding por dirección */
+.pd-inline16 { --pad-inline-16: var(--pad-inline-16); }
+.pd-block { padding-block: var(--padding-block); }
+
+/* ✅ Gaps rápidos */
+.gap-4 { gap: var(--gap-4); }
+.gap-8 { gap: var(--gap-8); }
+.gap-10 { gap: var(--gap-10); }
+.gap-20 { gap: var(--gap-20); }
+.gap-24 { gap: var(--gap-24); }
+
+

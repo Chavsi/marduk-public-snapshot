@@ -1,0 +1,21 @@
+
+{% extends "shared/main.html" %}
+
+{% block title %}{{ SITE_NAME }} - "En construccion"{% endblock %}
+
+{% block content %}
+
+  {% if back_url is not defined %}    
+    {% set back_url = url_for('landing.index') %}
+  {% endif %}
+  <div class="box center">
+    <h2>🏗️ En construcción</h2>
+    <p>Estamos trabajando en esta sección. ¡Pronto estará disponible!</p>
+  </div>
+  <div>
+    <button class="button-link back-btn" data-back="/">
+      <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="button-icon">
+      Regresar
+    </button>
+  </div>
+{% endblock %}

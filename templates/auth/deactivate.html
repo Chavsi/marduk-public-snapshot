@@ -1,0 +1,81 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Confirmar Desactivación{% endblock %}
+
+{% block dashboard_content %}
+
+<div class="control-bar">
+  <h5 class="control-bar-title">
+    <img src="{{ url_for('static', filename='icons/warning-white.svg') }}" alt="Desactivar Cuenta" class="btn-icon">
+    Desactivar Cuenta
+  </h5>
+  
+  <button class="button-link back-btn" data-back="/">
+    <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="btn-icon">
+    Regresar
+  </button>
+</div>
+
+<div class="box autofit dark left">
+  <h3 class = "box-title-white">🚨 Desactivar Cuenta</h3>
+  
+  {% if error %}
+    <div class="warning-box">{{ error }}</div>
+  {% endif %}
+
+  <div class="warning-box">
+    <h4 class="box-title-white"><strong>Usuario:</strong> {{ current_user.username }}</h4>
+    <p>⚠️ Esta acción <strong>desactivará tu cuenta</strong></p>
+    <p>⚠️ Es una acción destructiva sin punto de retorno.</p>
+  </div>
+
+  <form id="deactivate-form"
+    method="POST"
+    action="{{ url_for('auth.deactivate.deactivate_confirm') }}"
+    data-expected="{{ current_user.username|e }}">
+
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    
+    <label class="checkbox">
+      <input type="checkbox" name="confirm_ack" id="confirm_ack">
+      <span>Entiendo las consecuencias de desactivar mi cuenta.</span>
+    </label>
+
+    <div class="form-group">
+      <label for="confirm_username">Escribe tu usuario para confirmar:</label>
+      <input
+        class="input"
+        type="text"
+        id="confirm_username"
+        name="confirm_username"
+        placeholder="Tu usuario exacto"
+        autocomplete="off" autocapitalize="none" spellcheck="false"
+        required
+      >
+      <div id="mismatch" class="form-error" style="display:none" aria-live="polite">
+        El nombre de usuario no coincide.
+      </div>
+    </div>
+
+    {# 🔻 Mensaje de error cerca del submit #}
+    {% if error %}
+      <div class="form-error">{{ error }}</div>
+    {% endif %}
+
+    <div class="box button-layout">
+      <button id="confirm_btn" type="submit" class="button button-danger" disabled>
+        💀 Confirmar Desactivación
+      </button>
+      <a href="{{ url_for('quickboard.index') }}" class="button button-secondary">
+        ❌ Cancelar
+      </a>
+    </div>
+  </form>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+<script src="{{ url_for('static', filename='js/auth/deactivate.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}

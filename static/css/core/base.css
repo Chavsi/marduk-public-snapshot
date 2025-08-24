@@ -1,0 +1,53 @@
+/* ===============================================
+✅ BASE CSS — Estilos Globales + Reset
+Contiene:
+- Reset mínimo (márgenes y box-sizing)
+- Estilos base de html y body
+- Tipografía y scroll base
+================================================== */
+/* ✅ Minimal Reset (solo lo esencial) */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ Base Html and Body global Styles */
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* oculta scroll lateral */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* iOS momentum scroll */
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* oculta scroll lateral */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-white);
+  color: var(--on-white);
+  font-family: 'Rubik', sans-serif, 'Segoe UI', 'Arial';
+  font-size: var(--font-16);    /* 1rem / 16px */
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  will-change: scroll-position;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bot-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}

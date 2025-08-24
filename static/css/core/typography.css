@@ -1,0 +1,87 @@
+/* ===================================================
+✅ TYPOGRAPHY - HEADINGS
+=================================================== */
+h1 {
+  font-size: var(--font-48);                /* 48px - Portadas, banners impactantes */
+  font-weight: var(--bold-800);
+  color: var(--on-white);
+  margin-top: var(--mg-24);
+  margin-bottom: var(--mg-24);
+}
+
+h2 {
+  font-size: var(--font-40);                /* 2.5rem / 40px - Hero headers */
+  font-weight: var(--bold-400);
+  color: var(--on-white);
+  margin-top: var(--mg-20);
+  margin-bottom: var(--mg-20);
+}
+
+h3 {
+  font-size: var(--font-32);                    /* 32px - Títulos grandes */
+  font-weight: var(--bold-400);
+  color: var(--on-white);
+  margin-top: var(--mg-16);
+  margin-bottom: var(--mg-16);
+}
+
+h4 {
+  font-size: var(--font-24);                    /* 24px - Títulos */
+  font-weight: var(--bold-500);
+  color: var(--on-white);
+  margin-top: var(--mg-12);
+  margin-bottom: var(--mg-12);
+}
+
+h5 {
+  font-size: var(--font-20);                   /* 20px - Subtítulos */
+  font-weight: var(--bold-400);
+  color: var(--on-white);
+  margin-top: var(--mg-10);
+  margin-bottom: var(--mg-4);
+}
+
+h6 {
+  font-size: var(--font-18);                   /* 18px - Párrafos importantes */
+  font-weight: var(--bold-400);
+  color: var(--on-white);
+  margin-bottom: var(--mg-16);
+}
+
+/* ===================================================
+✅ TYPOGRAPHY - PARAGRAPH & VARIANTS
+=================================================== */
+p {
+  font-size: var(--font-16);
+  font-weight: var(--bold-400);
+  line-height: 1.6;
+  color: var(--on-white);
+  margin-bottom: var(--mg-0);
+  text-align: justify;
+}
+
+.text-muted {
+  color: var(--text-muted);
+  font-size: var(--font-16);
+}
+
+.text-disabled {
+  color: var(--text-disabled);
+  font-size: var(--font-16);
+}
+
+.small {
+  font-size: var(--font-14);
+}
+
+.lead {
+  font-size: var(--font-18);
+  font-weight: var(--bold-500);
+}
+
+/* ===================================================
+✅ TYPOGRAPHY - ALIGNMENT
+=================================================== */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }

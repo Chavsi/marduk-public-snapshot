@@ -1,0 +1,64 @@
+/* ✅ Selection Form Container */
+.selection-form-container {
+  border: 1px solid var(--table-border);
+  padding: 10px 20px;
+  border-radius: var(--radius-4);
+  background-color: var(--table-bg);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-10);
+}
+
+/* ✅ Selection Display */
+.selection-form-display {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--gap-10);
+}
+
+/* ✅ Client Info */
+.client-info {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  gap: var(--gap-10);
+  border: 1px solid var(--table-border);
+  border-radius: var(--radius-4);
+  background-color: var(--table-bg);
+}
+
+/* ✅ Select Fields */
+select {
+  width: 260px;
+  padding: var(--pad-8);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-8);
+  font-size: var(--font-16);
+}
+
+
+/* ✅ Input Fields */
+textarea {
+  width: 100%;
+  padding: var(--pad-8);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-4);
+  font-size: 14px;
+}
+
+/* ✅ Focus Effect */
+select:focus {
+  border-color: var(--input-focus);
+  outline: none;
+}
+
+/* ✅ Focus Effect */
+textarea:focus {
+  border-color: var(--input-focus);
+  outline: none;
+}

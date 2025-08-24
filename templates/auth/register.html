@@ -1,0 +1,124 @@
+{% extends "shared/main.html" %}
+
+{% block title %}Registrarse{% endblock %}
+
+{% block content %}
+<section class="section section-form">
+<div class="box silver center">
+
+    <form id="RegisterForm" action="/auth/register" method="POST" class="form horizontal" autocomplete="on">
+
+        <h3 class="text-center box-title-white">
+            <img src="{{ url_for('static', filename='icons/pen-white.svg') }}" alt="Registro" class="label-icon">
+            Regístrate
+        </h3>
+
+        <div class="row horizontal">
+            <label class="label silver base left-reg" for="name">
+                <img src="{{ url_for('static', filename='icons/user-white.svg') }}" alt="Nombre" class="label-icon">
+                Nombre:
+            </label>
+            <input class="input reg" type="text" id="name" name="name" autocomplete="name" placeholder="Nombre" required>
+        </div>
+        <span id="nameError" class="error-message"></span>
+
+        <div class="row horizontal">
+            <label class="label silver base left-reg" for="username">
+                <img src="{{ url_for('static', filename='icons/username-white.svg') }}" alt="Usuario" class="label-icon">
+                Usuario:
+            </label>
+            <input class="input reg" type="text" id="username" name="username" autocomplete="username" placeholder="Usuario" required>
+        </div>
+        <span id="usernameError" class="error-message"></span>
+
+        <div class="row horizontal">
+            <label class="label silver base left-reg" for="email">
+                <img src="{{ url_for('static', filename='icons/email-white.svg') }}" alt="Email" class="label-icon">
+                Email:
+            </label>
+            <input class="input reg" type="email" id="email" name="email" autocomplete="email" placeholder="Correo electrónico" required>
+        </div>
+        <span id="emailError" class="error-message"></span>
+
+        <div class="row horizontal">
+            <label class="label silver base left-reg" for="phone_number">
+                <img src="{{ url_for('static', filename='icons/phone-white.svg') }}" alt="Teléfono" class="label-icon">
+                Teléfono:
+            </label>
+            <input class="input reg" type="text" id="phone_number" name="phone_number" autocomplete="tel" placeholder="Número de teléfono">
+        </div>
+        <span id="phoneError" class="error-message"></span>
+
+        <div class="row horizontal">
+            <label class="label silver base left-reg" for="address">
+                <img src="{{ url_for('static', filename='icons/address-white.svg') }}" alt="Dirección" class="label-icon">
+                Dirección:
+            </label>
+            <input class="input reg" type="text" id="address" name="address" autocomplete="street-address" placeholder="Dirección">
+        </div>
+        <span id="addressError" class="error-message"></span>
+
+        <div class="row horizontal">
+            <label class="label silver base left-reg" for="password">
+                <img src="{{ url_for('static', filename='icons/key-white.svg') }}" alt="Contraseña" class="label-icon">
+                Contraseña:
+            </label>
+            <div class="password-wrapper">
+                <input class="input reg password-input" type="password" id="password" name="password" autocomplete="new-password" placeholder="Contraseña" required data-password-check>
+                <button type="button" class="toggle-password" aria-label="Mostrar/Ocultar contraseña">
+                    <img src="{{ url_for('static', filename='icons/eye-open-black.svg') }}" alt="Mostrar" class="eye-icon">
+                </button>
+            </div>            
+        </div>
+        <span id="passwordError" class="error-message"></span>
+
+        <!-- Validación visual -->
+
+        <div id="password-criteria" class="password-criteria-row">
+            <span id="lenCheck" class="password-label">❌ 8 caracteres</span>
+            <span id="lowerCheck" class="password-label">❌ minúscula</span>
+            <span id="upperCheck" class="password-label">❌ Mayúscula</span>
+            <span id="digitCheck" class="password-label">❌ Número</span>
+            <span id="symbolCheck" class="password-label">❌ Símbolo</span>
+        </div>
+
+
+        <div class="row horizontal">
+            <label class="label silver base left-reg" for="confirm_password">
+                <img src="{{ url_for('static', filename='icons/key-white.svg') }}" alt="Confirmar" class="label-icon">
+                Confirmar:
+            </label>
+            <div class="password-wrapper">
+                <input class="input reg password-input" type="password" id="confirm_password" name="confirm_password" autocomplete="new-password" placeholder="Confirmar contraseña" required>
+                <button type="button" class="toggle-password" aria-label="Mostrar/Ocultar contraseña">
+                    <img src="{{ url_for('static', filename='icons/eye-open-black.svg') }}" alt="Mostrar" class="eye-icon">
+                </button>
+            </div>
+        </div>
+        <span id="confirmPasswordError" class="error-message"></span>
+
+        <div class="box button-layout">
+            <p>¿Ya tienes cuenta?
+                <a href="{{ url_for('auth.login.login') }}">
+                    <img src="{{ url_for('static', filename='icons/key-white.svg') }}" alt="Login" class="label-icon">
+                    Login
+                </a>
+            </p>
+            <button type="submit" class="button button-success button-icon">
+                <img src="{{ url_for('static', filename='icons/pen-white.svg') }}" alt="Registrar" class="label-icon">
+                Regístrate
+            </button>
+        </div>
+
+    </form>
+
+    <div id="message" class="text-muted"></div>
+
+</div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/auth/register.js') }}?v={{ ASSET_VERSION }}"></script>
+<script src="{{ url_for('static', filename='js/auth/password.js') }}?v={{ ASSET_VERSION }}" type="module"></script>
+{% endblock %}

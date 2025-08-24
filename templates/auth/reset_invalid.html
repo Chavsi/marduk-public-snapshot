@@ -1,0 +1,29 @@
+{# templates/auth/reset_invalid.html #}
+{% extends "shared/main.html" %}
+
+{% block title %}Token inválido{% endblock %}
+
+{% block content %}
+<section class="section section-secondary">
+  <div class="box dark center">
+    <h2 class="box-title-white">
+      <img src="{{ url_for('static', filename='icons/warning-yellow.svg') }}" class="label-icon" alt="Advertencia">
+      Token inválido o expirado
+    </h2>
+    <p>El enlace que has utilizado ya no es válido. Esto puede deberse a que:</p>
+    <ul>
+      <li>🔒 El token ya ha sido usado.</li>
+      <li>⏱️ El token ha expirado (más de 1 hora).</li>
+      <li>⚠️ El enlace ha sido modificado o es incorrecto.</li>
+    </ul>
+    <p>Por favor, vuelve a solicitar un nuevo enlace desde la página de <a href="{{ url_for('auth.forgot_password.forgot_password') }}">recuperación de contraseña</a>.</p>
+
+    <div class="box button-layout">
+      <a href="{{ url_for('auth.login.login') }}" class="button button-warning button-icon">
+        <img src="{{ url_for('static', filename='icons/login-white.svg') }}" class="label-icon" alt="Login">
+        Volver al Login
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

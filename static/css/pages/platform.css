@@ -1,0 +1,62 @@
+.platform {
+  position: relative;
+  width: 1200px;
+  height: auto;
+  background: var(--bg-lt-gray-deco);
+  margin-top: var(--mg-32);
+  margin-bottom: var(--mg-32);
+  align-items: center;
+  justify-items: center;
+  padding-left: var(--pad-64);
+  padding-right: var(--pad-64);
+  padding-top: var(--pad-80);
+  padding-bottom: var(--pad-80);
+  border-radius: var(--radius-14);
+  box-shadow: 0px 6px 6px 2px var(--overlay-6);
+}
+
+.platform img {
+  width: 768px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.person {
+  width: 40px;
+  height: 40px;
+  background: bg-var(--bg-diesel-deco);
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+  background: var(--bg-diesel);
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .platform {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    padding-left: var(--pad-16);
+    padding-right: var(--pad-16);
+    padding-top: var(--pad-40); 
+    padding-bottom: var(--pad-40);
+  }
+
+  .platform img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+
+  .block, .person {
+    transform: scale(0.8);
+  }
+}

@@ -1,0 +1,25 @@
+/* ✅ Main Layout Styles */
+
+.main-content {
+  flex: 1;
+  width: 100vh;
+  min-height: 100vh;
+  margin-right: var(--mg-12);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    width: 100vh;
+    min-height: auto;
+    margin-right: var(--mg-4);
+  }
+}
+
+@media (max-width: 420px) {
+  .main-content {
+    width: 100%;
+    min-height: auto;
+    padding: var(--pad-10media);
+    margin-right: var(--mg-0);
+  }
+}

@@ -1,0 +1,42 @@
+[
+    {
+      "slug": "servicios",
+      "title": "📜1. Servicios"
+    },
+    {
+      "slug": "soporte_tecnico_y_helpdesk",
+      "title": "📜2. Soporte Técnico y Helpdesk"
+    },
+    {
+      "slug": "infraestructura_y_sysadmin",
+      "title": "📜3. Infraestructura y SysAdmin"
+    },
+    {
+      "slug": "gestion_de_software_y_licencias",
+      "title": "📜4. Gestión de Software y Licencias"
+    },
+    {
+      "slug": "gestion_de_usuarios",
+      "title": "📜5. Gestión de Usuarios"
+    },
+    {
+      "slug": "respaldos_y_drp",
+      "title": "📜6. Respaldos y (DRP)"
+    },
+    {
+      "slug": "correo_corporativo_y_mx",
+      "title": "📜7. Correos Corporativos y MX"
+    },
+    {
+      "slug": "web_y_hosting",
+      "title": "📜8. Web y Hosting"
+    },
+    {
+      "slug": "consultoria_y_reportes_estrategicos",
+      "title": "📜 9. Consultoria y Reportes Estratégicos"
+    },
+    {
+      "slug": "marduk",
+      "title": "🌌 10. Marduk Secure Web App for Database Deployment"
+    }
+]

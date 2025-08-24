@@ -1,0 +1,40 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}{{ page_title or "Catálogos" }}{% endblock %}
+
+{% block dashboard_content %}
+<div class="control-bar">
+  <h5 class="control-bar-title">
+    <img src="{{ url_for('static', filename='icons/catalogs-white.svg') }}" class="title-icon">
+    {{ page_title or "Catálogos de la Plataforma" }}
+  </h5>
+  <button class="button-link back-btn" data-back="{{ back_url or '/' }}">
+    <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" class="button-icon">
+    Regresar
+  </button>
+</div>
+
+<div class="text-bar">
+  <p class="subtitle">Selecciona un catálogo para ver, editar o agregar items.</p>
+</div>
+
+<div class="catalogs-wrapper">
+  {% for group_name, items in grouped_items.items() %}
+    <ul class="catalog-links">
+      <li><h5>{{ group_name }}</h5></li>
+        {% for item in items %}
+          <li>
+            <a href="{{ url_for(link_endpoint, model_name=item.model_name) }}">
+              {{ item.emoji }} {{ item.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}

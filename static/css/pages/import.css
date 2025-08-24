@@ -1,0 +1,188 @@
+/* ====== Import view: layout & helpers ====== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  gap: 12px 16px;
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+.form-row {
+  display: contents; /* deja que label y control ocupen las columnas */
+}
+
+.form-row > label {
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 6px 0;
+  color: inherit; /* respeta light/dark */
+}
+
+.form-row > *:not(label) {
+  min-width: 0; /* evita overflow en grid */
+}
+
+/* ====== Pills (campos esperados) ====== */
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: var(--font-16);
+  line-height: 1;
+  color: inherit;
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  height: 36px;
+}
+
+/* mejor contraste en contenedores .dark */
+.box.dark .pill {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* ====== Code (encabezado CSV sugerido) ====== */
+.code {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: var(--font-16);
+  background: #f6f7f9;
+  border: 1px solid rgba(0,0,0,0.08);
+  color: inherit;
+}
+
+.box.dark .code {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* ====== Tabla compacta ====== */
+.table-mini {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 4px;
+}
+
+.box.dark .table-mini {
+  border-color: rgba(255,255,255,0.18);
+}
+
+.table-mini table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table-mini th,
+.table-mini td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  white-space: nowrap;
+}
+
+.table-mini thead th {
+  font-weight: 700;
+}
+
+.box.dark .table-mini th,
+.box.dark .table-mini td {
+  border-bottom-color: rgba(255,255,255,0.12);
+}
+
+#import-errors .table-mini th,
+#import-errors .table-mini td {
+  white-space: normal;              /* permitir saltos de línea */
+  vertical-align: top;
+}
+
+#import-errors .table-mini th:first-child,
+#import-errors .table-mini td:first-child {
+  width: 72px;                      /* columna “Fila” angosta y fija */
+  white-space: nowrap;              /* no romper el número */
+  text-align: right;
+}
+
+/* Columna de “Error”: ocupa el resto y parte palabras largas si hace falta */
+#import-errors .table-mini th:nth-child(2),
+#import-errors .table-mini td:nth-child(2) {
+  width: auto;
+  overflow-wrap: anywhere;          /* romper cadenas largas */
+  word-break: break-word;           /* respaldo en navegadores viejos */
+  line-height: 1.25;
+}
+
+/* ====== Acciones ====== */
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 8px;
+  height: 200px;
+}
+
+@media (max-width: 640px) {
+  .form-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* Pie en dos columnas: acciones | resultado */
+.form-footer {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  align-items: stretch; 
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .form-footer { grid-template-columns: 1fr; }
+}
+
+/* Panel de resultado */
+.result-panel {
+  align-self: stretch;  
+  padding: 12px;
+  height: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.05);
+  min-height: 56px;           /* evita “saltos” al aparecer */
+  width: 100%;
+}
+
+.box:not(.dark) .result-panel {
+  border-color: rgba(0,0,0,0.08);
+  background: #f6f7f9;
+}
+
+.result-title, .result-subtitle {
+  margin: 0 0 8px;
+  color: inherit;
+  font-weight: 700;
+}
+
+.result-summary { margin-bottom: 6px; }
+
+/* La tabla compacta ya la tienes; aseguramos ancho completo */
+.result-panel .table-mini { width: 100%; }

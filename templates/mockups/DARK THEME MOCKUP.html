@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Vista previa de paleta</title>
+  <style>
+    :root {
+      --black: #0F0F0F;
+      --dark-gray: #1E1E1E;
+      --light-gray: #CCCCCC;
+      --white: #FFFFFF;
+      --green: #00DFA2;
+      --blue: #007BFF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--black);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: var(--dark-gray);
+      border: 1px solid var(--light-gray);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 400px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--light-gray);
+    }
+
+    .button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0.5rem;
+      transition: background 0.3s ease;
+    }
+
+    .button-green {
+      background-color: var(--green);
+      color: var(--black);
+    }
+
+    .button-green:hover {
+      background-color: #00c28f;
+    }
+
+    .button-blue {
+      background-color: var(--blue);
+      color: var(--white);
+    }
+
+    .button-blue:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>CompuMasSoft UI</h1>
+    <p>Este es un ejemplo visual con los colores base que mencionaste.</p>
+    <button class="button button-green">Acción Verde</button>
+    <button class="button button-blue">Acción Azul</button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* CONTROL BAR COMPONENTES */
+.control-bar {
+  background: var(--bg-dk-lead);
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: var(--mg-12);
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  height: 56px;
+  align-items: center;
+  padding-left: var(--pad-14);
+  padding-right: var(--pad-14);
+  border-radius: var(--radius-8);
+  border: var(--border-05);  
+  box-shadow: 0 2px 8px #313131;
+  width: fit-content;
+}
+
+.overview-bar {
+  background: var(--bg-dk-lead);
+  display: flex;
+  gap: var(--gap-16);
+  margin-bottom: var(--mg-0);
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  height: fit-content;
+  align-items: flex-start;
+  padding-left: var(--pad-14);
+  padding-right: var(--pad-14);
+  border-radius: var(--radius-10);
+  border: var(--border-05);  
+  box-shadow: none;
+  width: fit-content;
+  flex-direction: column;
+}
+
+.text-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  align-self: flex-start;
+  padding: var(--pad-12);
+  background: var(--bg-dk-lead);
+  color: var(--on-dark);
+  box-shadow: 0 2px 8px #313131;
+  border-radius: var(--radius-8);
+  margin-top: var(--mg-0);
+  margin-bottom: var(--mg-0);
+  margin-left: var(--mg-0);
+  margin-right: var(--mg-0);
+  border: var(--border-05);         
+  max-width: 100%;
+  gap: var(--gap-8);
+}
+
+.text-bar p {
+  color: var(--on-dark);
+}
+
+.control-bar-title {
+  font-size: var(--font-18);
+  font-weight: var(--bold-500);
+  color: var(--on-dark);  /* Asumiendo que quieres contraste con el fondo */
+  margin: var(--mg-0);
+  padding-left: var(--pad-8);
+  padding-right: var(--pad-12);
+  white-space: nowrap;  /* Opcional: evita salto de línea si el título es corto */
+}
+
+@media (max-width: 768px) {
+  .overview-bar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100% !important;
+    padding: var(--pad-10media);  /* puedes definir o reutilizar otro valor suave */
+    gap: var(--gap-8);            /* más aire entre bloques si hay varios */
+    height: auto !important;
+  }
+
+  .control-bar {
+    flex-direction: column;
+    align-items: flex-start;        /* 🧠 cambia de center a inicio */
+    gap: var(--gap-6);              /* 🔧 más estrecho entre ítems */
+    width: 100% !important;         /* 🔒 fuerza que no se salga */
+    padding: var(--pad-10media);    /* suaviza padding lateral */
+    height: auto !important;        /* deja que crezca si hay contenido */
+  }
+  .control-bar-title {
+    font-size: var(--font-16);      /* opcional: suaviza en móvil */
+    white-space: normal;            /* ✅ permite saltos de línea */
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .control-bar button,
+  .control-bar .button,
+  .control-bar .button-link {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-top: var(--mg-6);        /* espacio entre título y botón */
+  }
+    .control-bar.autofit {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100% !important;
+    height: auto;
+    padding: var(--pad-10);
+    gap: var(--gap-6);
+  }
+  .control-bar.autofit > * {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  /* Si usas íconos o spans sueltos dentro */
+  .control-bar span,
+  .control-bar svg,
+  .control-bar .control-bar-icon {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .overview-bar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100% !important;
+    padding: var(--pad-10media);  /* puedes definir o reutilizar otro valor suave */
+    gap: var(--gap-8);            /* más aire entre bloques si hay varios */
+    height: auto !important;
+  }
+
+  .control-bar {
+    flex-direction: column;
+    align-items: flex-start;        /* 🧠 cambia de center a inicio */
+    gap: var(--gap-6);              /* 🔧 más estrecho entre ítems */
+    width: 100% !important;         /* 🔒 fuerza que no se salga */
+    padding: var(--pad-10media);    /* suaviza padding lateral */
+    height: auto !important;        /* deja que crezca si hay contenido */
+  }
+  .control-bar-title {
+    font-size: var(--font-16);      /* opcional: suaviza en móvil */
+    white-space: normal;            /* ✅ permite saltos de línea */
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .control-bar button,
+  .control-bar .button,
+  .control-bar .button-link {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-top: var(--mg-6);        /* espacio entre título y botón */
+  }
+    .control-bar.autofit {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100% !important;
+    height: auto;
+    padding: var(--pad-10);
+    gap: var(--gap-6);
+  }
+  .control-bar.autofit > * {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  /* Si usas íconos o spans sueltos dentro */
+  .control-bar span,
+  .control-bar svg,
+  .control-bar .control-bar-icon {
+    align-self: flex-start;
+  }
+}

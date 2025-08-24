@@ -1,0 +1,48 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Ver usuario: {{ user.username }}{% endblock %}
+
+{% block dashboard_content %}
+
+<div class="control-bar">
+  <h5 class="control-bar-title">
+    <img src="{{ url_for('static', filename='icons/user-white.svg') }}" alt="User" class="btn-icon">
+    Usuario de Plataforma
+  </h5>
+  <button class="button-link back-btn" data-back="{{ back_url or '/' }}">
+    <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="btn-icon">
+    Regresar
+  </button>
+</div>
+
+<div class="box autofit dark left">
+  <h5 class="catalog-title">Información del Usuario</h5>
+
+  {% set fields = {
+    "ID": user.id,
+    "Username": user.username,
+    "Nombre": user.name,
+    "Email": user.email,
+    "Teléfono": user.phone_number,
+    "Dirección": user.address,
+    "Rol": user.role,
+    "Último Login": user.last_login,
+    "Plan Actual": user.plan_name,
+    "Plan Activo": user.active_plan_name,
+    "Precio del Plan": user.plan_price,
+    "Estado": "Activo" if user.estado == 1 else "Inactivo",
+    "Creado por": user.created_by,
+    "Fecha de creación": user.created_at,
+    "Última modificación": user.modified_at
+  } %}
+
+  {% for label, value in fields.items() %}
+    <div class="row horizontal">
+      <label class="label dark md left">{{ label }}</label>
+      <div class="label lg left data">{{ value or "—" }}</div>
+    </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+/* Estilo del contenedor del dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilo del botón */
+.dropbtn {
+  background-color: var(--bg-dk-gray);
+  color: white;
+  padding: 10px 20px;
+  font-size: var(--font-16);
+  border: none;
+  border-radius: var(--radius-4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+  background-color: var(--hover-dk-gray);
+}
+
+/* Estilo del contenido del dropdown */
+.dropdown-content {
+  display: none;  /* Inicialmente está oculto */
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px var(--overlay-2);
+  z-index: 1;
+  border-radius: var(--radius-4);
+  overflow: hidden;
+}
+
+/* Estilo de los elementos dentro del dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--hover-gray);
+}
+
+/* Mostrar el contenido del dropdown cuando el usuario pasa el ratón sobre el contenedor */
+.dropdown:hover .dropdown-content {
+  display: block;
+}

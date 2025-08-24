@@ -1,0 +1,86 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Editar Perfil{% endblock %}
+
+{% block dashboard_content %}
+
+<div class="control-bar">
+
+  <h5 class="control-bar-title">
+    <img src="{{ url_for('static', filename='icons/pen-white.svg') }}" alt="Editar Perfil" class="btn-icon">
+    Editar Perfil
+  </h5>
+
+  <button class="button-link back-btn" data-back="/">
+    <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="btn-icon">
+    Regresar
+  </button>
+
+</div>
+
+<div class="box md dark left">
+
+  <form id="EditProfileForm" class="form horizontal" autocomplete="on">
+        
+    <div class="row horizontal">
+      <label class="label dark base left" for="username">
+        <img src="{{ url_for('static', filename='icons/username-white.svg') }}" alt="Usuario" class="label-icon">
+        Usuario:
+      </label>
+      <input class="input md" type="text" id="username" name="username" readonly autocomplete="username">
+    </div>
+        
+    <div class="row horizontal">
+      <label class="label dark base left" for="email">
+        <img src="{{ url_for('static', filename='icons/email-white.svg') }}" alt="Email" class="label-icon">
+        Email:
+      </label>
+      <input class="input md" type="email" id="email" name="email" readonly autocomplete="email">
+    </div>
+        
+    <div class="row horizontal">
+      <label class="label dark base left" for="phone">
+        <img src="{{ url_for('static', filename='icons/phone-white.svg') }}" alt="Teléfono" class="label-icon">
+        Teléfono:
+      </label>
+      <input class="input md" type="text" id="phone" name="phone" readonly autocomplete="tel">
+    </div>
+        
+    <div class="row horizontal">
+      <label class="label dark base left" for="name">
+        <img src="{{ url_for('static', filename='icons/user-white.svg') }}" alt="Nombre" class="label-icon">
+        Nombre:
+      </label>
+      <input class="input md" type="text" id="name" name="name" autocomplete="name" required>
+      <span id="nameError" class="error-message"></span>
+    </div>
+        
+    <div class="row horizontal">
+      <label class="label dark base left" for="address">
+        <img src="{{ url_for('static', filename='icons/address-white.svg') }}" alt="Dirección" class="label-icon">
+        Dirección:
+      </label>
+      <input class="input md" type="text" id="address" name="address" autocomplete="street-address">
+      <span id="addressError" class="error-message"></span>
+    </div>
+        
+    <div class="box button-layout">
+      <a href="{{ url_for('user.profile.view') }}" class="button button-secondary button-icon">
+        <img src="{{ url_for('static', filename='icons/cancel-white.svg') }}" alt="cancelar" class="label-icon">
+        Cancelar
+      </a>
+      <button type="submit" class="button button-success button-icon">
+        <img src="{{ url_for('static', filename='icons/save-white.svg') }}?v={{ ASSET_VERSION }}" alt="Save" class="label-icon">
+        Guardar
+      </button>
+    </div>
+
+  </form>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+  <script src="{{ url_for('static', filename='js/auth/edit_profile.js') }}"></script>
+{% endblock %}

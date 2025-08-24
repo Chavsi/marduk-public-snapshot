@@ -1,0 +1,49 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Setup Assets de Plataforma{% endblock %}
+
+{% block dashboard_content %}
+
+<div class="control-bar">
+  <h5 class="control-bar-title">
+    <img src="{{ url_for('static', filename='icons/settings-white.svg') }}" alt="Setup" class="btn-icon">
+    Inicializar Catálogos Base de Assets
+  </h5>
+
+  <button class="button-link back-btn" data-back="/">
+    <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="btn-icon">
+    Regresar
+  </button>
+
+  <!-- <button id="initCatalogsBtn" class="button button-warning">
+    <img src="{{ url_for('static', filename='icons/settings-black.svg') }}" alt="Setup" class="btn-icon">
+    Sembrar Catálogos
+  </button> -->
+
+</div>
+
+<div class="box autofit dark left">
+  <p>Selecciona los catálogos que deseas sembrar:</p>
+
+  <form>
+    <label><input type="checkbox" name="seed_tests" unchecked> Test Models</label><br>
+    <label><input type="checkbox" name="seed_core" unchecked> Core Models</label><br>
+    <label><input type="checkbox" name="seed_base" unchecked> Catálogos Base de Assets</label><br>
+    <label><input type="checkbox" name="seed_aux" unchecked> Catálogos Auxiliares de Assets</label><br><br>
+
+    <div id="setup-response"></div>
+
+    <button id="initCatalogsBtn" class="button button-warning">
+      <img src="{{ url_for('static', filename='icons/settings-black.svg') }}" alt="Setup" class="btn-icon">
+      Sembrar Catálogos Seleccionados
+    </button>
+  </form>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+<script src="{{ url_for('static', filename='js/admin/seeds/admin_setup_seeds.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}

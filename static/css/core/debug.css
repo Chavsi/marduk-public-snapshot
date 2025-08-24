@@ -1,0 +1,5 @@
+/* ================= DEBUG BORDERS ================= */
+/* 🔹 Global border for debugging structure */
+* {
+  outline: 1px solid red !important; /* Change color if needed */
+}

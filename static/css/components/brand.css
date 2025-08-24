@@ -1,0 +1,25 @@
+/* ✅ Header Title: contenedor de logo + marca */
+.brand {
+  flex:1;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-10);  /* 10px */
+  max-width: 280px;
+}
+
+/* ✅ Header Logo */
+.brand .logo img {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-right: var(--mg-8);  /* 8px */
+}
+
+.brand .marca img {
+  display: flex;
+  align-items: center;
+  margin-top: var(--mg-2);    /* 4px */
+  height: 40px;
+  margin-right: var(--mg-8);  /* 8px */
+}
+

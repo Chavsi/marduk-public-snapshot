@@ -1,0 +1,131 @@
+/* ✅ Responsive Grid */
+.grid {
+  display: grid;
+  gap: var(--gap-32);
+  margin-inline: auto;
+  padding-inline: var(--pad-inline-16);
+}
+
+.grid-mini {
+  gap: var(--gap-4);
+  align-items: start;
+  width: 100%;
+  padding-left: 0;    
+  padding-right: var(--pad-20);
+}
+
+.grid-xs {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.grid-sm {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 768px;
+  margin-inline: auto;
+}
+
+.grid-md {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+  gap: var(--gap-40); 
+  max-width: 1024px;
+  margin-inline: auto;
+}
+
+.grid-lg {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  gap: var(--gap-48);
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-block: var(--pad-32);
+}
+
+.grid-xl {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1200px;
+  gap: var(--gap-64);
+  margin-inline: auto;  
+}
+
+.grid-equal {
+  align-items: stretch;
+}
+
+.grid-autofit {
+  display: grid;
+  gap: 16px; /* o usa var(--gap-1) si ya tienes esa variable */
+  width: 100%;
+  max-width: 1200px; /* o el ancho que te funcione bien */
+  align-items: start;
+  margin-top: var(--mg-12);
+  margin-bottom: var(--mg-0);
+  margin-left: var(--mg-0);
+  margin-right: var(--mg-0)
+}
+
+.grid-horizontal {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-vertical {
+  grid-template-columns: 1fr;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+
+@media (max-width: 420px) {
+  .grid,
+  .grid-xs,
+  .grid-sm,
+  .grid-md,
+  .grid-lg,
+  .grid-xl,
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important; /* Forzamos una columna */
+    gap: var(--gap-16);
+    padding-inline: var(--pad-inline-10media);
+    margin-inline: auto;
+  }
+
+  .grid-mini {
+    gap: var(--gap-4);
+    align-items: start;
+    width: 100%;
+    padding-left: 0;    
+    padding-right: var(--pad-20);
+  }
+
+  .grid-autofit, {
+    grid-template-columns: 1fr !important; /* Forzamos una columna */
+    gap: var(--gap-16);
+    padding-inline: var(--pad-inline-10media);
+    margin-inline: auto;
+  }
+
+  .grid-lg,
+  .grid-xl {
+    margin-top: var(--mg-32);
+    margin-bottom: var(--mg-32);
+  }
+  .grid-vertical {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr); /* De 3 o 4 a 2 columnas en tablets */
+  }
+  .grid-vertical {
+    grid-template-columns: 1fr !important;
+  }
+}

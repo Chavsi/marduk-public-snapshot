@@ -1,0 +1,16 @@
+<!-- Modal: Asignar Plan -->
+<div id="assignPlanModal" class="modal hidden">
+  <div class="modal-content box center">
+    <h2>🧩 Asignar Plan</h2>
+    <p>Selecciona el plan que deseas asignar al usuario:</p>
+    <select id="planSelector"></select>
+    <div class="modal-buttons">
+      <button class="button button-warning" id="confirmAssignPlan">Asignar</button>
+      <button class="button button-danger" id="cancelAssignPlan">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/admin/users/read_users.module.js') }}?v={{ ASSET_VERSION }}" type="module"></script>
+{% endblock %}

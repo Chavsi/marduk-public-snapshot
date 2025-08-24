@@ -1,0 +1,27 @@
+/* ✅ LAYOUT CSS  */
+.layout {
+  display: flex;
+  gap: var(--gap-12);
+  background-color: var(--bg-gray);
+  padding-top: var(--pad-8);
+}
+
+.title {
+  color: var(--on-white);
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: row;
+    gap: var(--gap-8);
+  }
+}
+
+@media (max-width: 420px) {
+  .layout {
+    flex-direction: column;  /* 🔁 Cambia de horizontal a vertical */
+    gap: var(--gap-8);       /* 🛠️ Reduce el espacio entre secciones si era mucho */
+    padding: var(--pad-10media); /* Opcional, agrega algo de espacio interno */
+  }
+}
+

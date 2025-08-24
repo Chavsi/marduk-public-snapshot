@@ -1,0 +1,43 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block dashboard_content %}
+
+  <div class="control-bar">
+    <h5 class="control-bar-title">
+      <img src="{{ url_for('static', filename='icons/settings-white.svg') }}" alt="Setup" class="btn-icon">
+      Crear Empresa
+    </h5>
+    <button class="button-link back-btn" data-back="/">
+      <img src="{{ url_for('static', filename='icons/arrow-back-white.svg') }}" alt="Back" class="btn-icon">
+      Regresar
+    </button>
+  </div>
+
+  <div class="box md dark left">
+    <p>Antes de usar la plataforma de assets necesitas crear tu empresa.</p>
+
+    <form id="crear-empresa-form" class="form horizontal">
+      <label class="label dark sm left" for="name">Nombre de la empresa:</label>
+      <input class="input lg" type="text" id="name" name="name" required>
+
+      <label class="label dark sm left" for="note">Descripción:</label>
+      <textarea class="input note" id="note" name="note"></textarea>
+
+      <div class="box button-layout">
+        <button type="submit" class="button button-success">
+          <img src="{{ url_for('static', filename='icons/add-item-white.svg') }}" alt="Crear empresa" class="btn-icon">
+          Crear empresa
+        </button>
+      </div>
+    </form>
+
+    <div id="respuesta" class="respuesta-box"></div>
+  </div>
+
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/components/sidebar.js') }}?v={{ ASSET_VERSION }}"></script>
+  <script src="{{ url_for('static', filename='js/company/company_setup.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}
+

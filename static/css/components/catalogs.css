@@ -1,0 +1,69 @@
+.catalogs-wrapper {
+  display: grid;
+  font-weight: var(--bold-400);
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  gap: var(--gap-24);
+  padding-top: var(--pad-12);
+  padding-bottom: var(--pad-4);
+  padding-left: var(--pad-0);
+  padding-right: var(--pad-0);
+}
+
+.catalog-title{
+  font-weight: var(--bold-400);
+  font-size: var(--font-18);
+  color: var(--on-dark);
+  margin-bottom: var(--mg-12);
+}
+
+.catalog-links {
+  font-weight: var(--bold-400);
+  margin-top: var(--mg-0);
+  margin-bottom: var(--mg-0);
+  border: var(--border-05);
+  padding: var(--pad-12);
+  border-radius: var(--radius-8);
+  list-style: none;
+  background-color: var(--bg-dk-lead);
+}
+
+.catalog-links h5 {
+  font-weight: var(--bold-400);
+  margin-top: var(--mg-0);
+  margin-bottom: var(--mg-0);
+  color: var(--on-dark);
+}
+
+.catalog-links ul {
+  font-weight: var(--bold-400);
+}
+
+.catalog-links li {
+  font-weight: var(--bold-400);
+  padding: var(--pad-4);
+  margin-top: var(--mg-0);
+  margin-bottom: var(--mg-0);
+}
+
+.catalog-links a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--on-dark);
+  font-weight: var(--bold-400);
+  border-radius: var(--radius-8);
+  padding: var(--pad-6x12);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: 1px solid var(--bg-lead);
+  margin-top: var(--mg-0);
+  margin-bottom: var(--mg-0);
+}
+
+.catalog-links a:hover {
+  background-color: var(--bg-lead);       /* ajusta si tienes definida esa variable */
+  color: var(--on-hover-dark);
+  text-decoration: none;
+  color: var(--on-dark); 
+  border: 1px solid var(--bg-white);
+}

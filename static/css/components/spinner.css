@@ -1,0 +1,49 @@
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.busy-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(2px);
+  z-index: 9999;
+}
+.busy-overlay:not(.hidden) { display: flex; }
+
+.busy-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #0b0f1a; /* oscuro compatible con tu tema */
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+}
+
+.busy-wheel {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.3);
+  border-top-color: #4da3ff;
+  animation: spin .8s linear infinite;
+}
+.busy-text { margin: 0; font-weight: 600; }

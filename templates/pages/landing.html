@@ -1,0 +1,326 @@
+{% extends "shared/main.html" %}
+
+{% block title %}Bienvenido a {{ SITE_NAME }}{% endblock %}
+
+{% block content %}
+
+<section class="section landing-section">
+  <div class="container is-center">
+    <div class="landing-intro">
+      <h1 class="landing-title">Bienvenido a {{ SITE_NAME }}.</h1>
+      <h2 class="landing-title">Levantamiento de bases de datos rápido y seguro.</h2>
+    </div>
+  </div>
+  
+  <div class="special-container">
+    <div class="cubes-wrapper">
+      
+      <div class="connector-line line-1"></div>
+      <div class="data-packet-1"></div>
+
+      <div class="connector-line line-2"></div>
+      <div class="data-packet-2"></div>
+
+      <div class="connector-line line-3"></div>
+      <div class="data-packet-3"></div>
+
+      <div class="connector-line line-4"></div>
+      <div class="data-packet-4"></div>
+
+      <div class="connector-line line-5"></div>
+      <div class="data-packet-5"></div>
+
+      <div class="connector-line line-6"></div>
+      <div class="data-packet-6"></div>
+
+      <div class="connector-line line-7"></div>
+      <div class="data-packet-7"></div>
+
+      <div class="connector-line line-8"></div>
+      <div class="data-packet-8"></div>
+
+      <div class="connector-line line-9"></div>
+      <div class="data-packet-9"></div>
+
+      <div class="connector-line line-10"></div>
+      <div class="data-packet-10"></div>
+
+      <div class="connector-line line-11"></div>
+      <div class="data-packet-11"></div>
+
+      <div class="simple-cube-scene pos-1">
+        <div class="simple-cube cube-tilt-1 size-1 color-green">
+          <div class="face front">
+            <img src="{{ url_for('static', filename='icons/database-black.svg') }}" alt="web-app" class="cube-icon">
+          </div>
+          <div class="face back"></div>
+          <div class="face right"></div>
+          <div class="face left"></div>
+          <div class="face top"></div>
+          <div class="face bottom"></div>
+        </div>
+      </div>
+      <div class="simple-cube-scene pos-2">
+        <div class="simple-cube cube-tilt-2 size-2 color-red">
+          <div class="face front">
+            <img src="{{ url_for('static', filename='icons/scroll-black.svg') }}" alt="reports" class="cube-icon">
+          </div>
+          <div class="face back"></div>
+          <div class="face right"></div>
+          <div class="face left"></div>
+          <div class="face top"></div>
+          <div class="face bottom"></div>
+        </div>
+      </div>
+      <div class="simple-cube-scene pos-4">
+        <div class="simple-cube cube-tilt-4 size-4 color-blue">
+          <div class="face front">
+            <img src="{{ url_for('static', filename='icons/devices-black.svg') }}" alt="devices" class="cube-icon">
+          </div>
+          <div class="face back"></div>
+          <div class="face right"></div>
+          <div class="face left"></div>
+          <div class="face top"></div>
+          <div class="face bottom"></div>
+        </div>
+      </div>
+      <div class="simple-cube-scene pos-3">
+        <div class="simple-cube cube-tilt-3 size-3 color-purple">
+          <div class="face front">
+            <img src="{{ url_for('static', filename='icons/users-black.svg') }}" alt="users" class="cube-icon">
+          </div>
+          <div class="face back"></div>
+          <div class="face right"></div>
+          <div class="face left"></div>
+          <div class="face top"></div>
+          <div class="face bottom"></div>
+        </div>
+      </div>
+      <div class="simple-cube-scene pos-5">
+        <div class="simple-cube cube-tilt-5 size-5 color-yellow">
+          <div class="face front">
+            <img src="{{ url_for('static', filename='icons/save-black.svg') }}" alt="software" class="cube-icon">
+          </div>
+          <div class="face back"></div>
+          <div class="face right"></div>
+          <div class="face left"></div>
+          <div class="face top"></div>
+          <div class="face bottom"></div>
+        </div>
+      </div>
+      <div class="simple-cube-scene pos-6">
+        <div class="simple-cube cube-tilt-6 size-6 color-diesel">
+          <div class="face front">
+            <img src="{{ url_for('static', filename='icons/logs-white.svg') }}" alt="server" class="cube-icon">
+          </div>
+          <div class="face back"></div>
+          <div class="face right"></div>
+          <div class="face left"></div>
+          <div class="face top"></div>
+          <div class="face bottom"></div>
+        </div>
+      </div>
+      <div class="simple-cube-scene base-scene">
+        <div class="platform-wrapper">
+          <div class="platform-cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container is-center">
+    <div class="platform">
+      <img src="{{ url_for('static', filename='img/landing/landing_platform.svg') }}" alt="Landing">
+    </div>
+  </div> -->
+
+  <div class="container is-center">
+    <div class="landing-intro-1">
+      <h2 class="landing-title-1">Servicios especializados para un mundo IT moderno.</h2>
+    </div>
+  </div>
+
+  <div class="container is-center">
+    <div class="landing-intro-2">
+      <h2 class="landing-title-2">Software.</h2>
+    </div>
+  </div>
+
+  <div class="container is-center">
+    <div class="grid-md grid-equal">
+      <a href="/marduk/index" class="service-card-link">
+        <div class="service-card" data-animate-card>
+          <div class="card-content">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='img/landing/flame.svg') }}" alt="Web App">
+            </div>
+            <div class="card-text">
+              <h4>Marduk Web App:</h4>
+              <p>Despliegue Seguro de Bases de Datos.</p>
+            </div>
+          </div>
+        </div>
+      </a>      
+      
+      <a href="/md/gestion_de_software_y_licencias" class="service-card-link">
+        <div class="service-card" data-animate-card>
+          <div class="card-content">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='img/landing/service-activosit.png') }}" alt="Gestión de Activos">
+            </div>
+            <div class="card-text">
+              <h4>Gestión de Activos Tecnológicos</h4>
+              <p>Control y seguimiento de recursos tecnológicos.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="/md/gestion_de_usuarios" class="service-card-link">
+        <div class="service-card" data-animate-card>
+          <div class="card-content">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='img/landing/service-usuarios.png') }}" alt="Gestión de Usuarios">
+            </div>
+            <div class="card-text">
+              <h4>Gestión de Usuarios (IAM)</h4>
+              <p>Seguridad y control de accesos a datos y sistemas críticos.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container is-center">
+    <div class="landing-intro-2">
+      <h2 class="landing-title-2">Servicios.</h2>
+    </div>
+  </div>  
+
+  <div class="container is-center">
+    <div class="grid-md grid-equal">
+      <a href="/md/soporte_tecnico_y_helpdesk" class="service-card-link">
+        <div class="service-card" data-animate-card>
+          <div class="card-content">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='img/landing/service-helpdesk.png') }}" alt="Soporte Técnico">
+            </div>
+            <div class="card-text">
+              <h4>Soporte Técnico y Helpdesk</h4>
+              <p>Soporte remoto y presencial.</p>
+              <p>Planes de soporte constante.</p>
+            </div>
+          </div>
+        </div>    
+      </a>      
+      
+      <a href="/md/correo_corporativo_y_mx" class="service-card-link">
+        <div class="service-card" data-animate-card>
+          <div class="card-content">
+              <div class="card-image">
+                <img src="{{ url_for('static', filename='img/landing/service-mail.png') }}" alt="Correo corporativo">
+              </div>
+              <div class="card-text">
+                <h4>Correo corporativo y Exchange (MX)</h4>
+                <p>Servicios de correo empresarial robustos y seguros.</p>
+              </div>
+          </div>
+        </div>
+      </a>      
+      
+      <a href="/md/respaldos_y_drp" class="service-card-link">
+        <div class="service-card" data-animate-card>
+          <div class="card-content">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='img/landing/service-backups.png') }}" alt="Backup y Recuperación">
+            </div>
+            <div class="card-text">
+              <h4>Backup y Recuperación (DRP)</h4>
+              <p>Respaldo y protección de datos, planificación y preparación ante desastres e imprevistos.</p>                        
+            </div>
+          </div>
+        </div>
+      </a>      
+    </div>
+  </div>      
+
+  <div class="container is-center">
+    <div class="landing-intro-2">
+      <h2 class="landing-title-2">Consultoría.</h2>
+    </div>
+  </div>  
+
+  <div class="container is-center">
+    <div class="grid-md grid-equal">
+      <a href="/md/infraestructura_y_sysadmin" class="service-card-link">
+        <div class="service-card" data-animate-card>
+          <div class="card-content">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='img/landing/service-sysadmin.png') }}" alt="Infraestructura y SysAdmin">
+            </div>
+            <div class="card-text">
+              <h4>Infraestructura y SysAdmin</h4>
+              <p>Administración y optimización de infraestructura tecnológica.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="/md/web_y_hosting" class="service-card-link">
+        <div class="service-card" data-animate-card>
+          <div class="card-content">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='img/landing/service-web.png') }}" alt="Infraestructura Web y DevOps">
+            </div>
+            <div class="card-text">
+              <h4>Infraestructura Web y DevOps</h4>
+              <p>Desarrollo de aplicaciones, implementación y automatización.</p>
+              <p>Despliegues de infraestructura Web moderna y segura.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      
+      <a href="/md/consultoria_y_reportes_estrategicos" class="service-card-link">
+        <div class="service-card" data-animate-card>
+          <div class="card-content">
+            <div class="card-image">
+              <img src="{{ url_for('static', filename='img/landing/service-consultoria.png') }}" alt="Consultoría">
+            </div>
+            <div class="card-text">
+              <h4>Consultoría reportes estratégicos / PMO</h4>
+              <p>Asesoría estratégica para proyectos IT.</p>
+            </div>
+          </div>
+        </div>
+      </a>      
+    </div>
+  </div>        
+
+  <div class="container is-center">
+    <div class="section-intro">
+      <h2 class="section-title">Tecnología que se adapta a tu negocio.</h2>
+      <h2 class="section-title">Flexible, Segura, Escalable.</h2>
+    </div>
+  </div>  
+
+  <!-- <div class="container is-center">
+    <div class="section-intro">
+      <h2 class="section-title">Soluciones tecnologicas adaptables, diseñadas a la medida de las necesidades especificas de cada empresa.</h2>
+    </div>
+  </div> -->
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/landing/landing.js') }}?v={{ ASSET_VERSION }}"></script>
+{% endblock %}
