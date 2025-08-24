@@ -20,6 +20,7 @@ from core.roles.services import has_role
 #import os
 from core.seeds.run_base_model_seeds import run_base_seeds
 
+# HOLA CODIGO: 555
 
 def mask(value, show=4):
     """Oculta parcialmente valores sensibles."""
