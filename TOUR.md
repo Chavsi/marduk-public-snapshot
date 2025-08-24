@@ -1,5 +1,5 @@
 ## Boot & Config
--`run.py` - 
+-`run.py` — entrypoint 
 - RAW (HEAD): https://raw.githubusercontent.com/Chavsi/marduk-public-snapshot/refs/heads/main/run.py
 - BLOB(para referir líneas): https://github.com/Chavsi/marduk-public-snapshot/blob/main/run.py
 
