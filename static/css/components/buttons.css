@@ -28,12 +28,12 @@
 }
 
 /* ✅ Button Variants */
-.button-primary { background-color: var(--bg-gray); color: var(--on-gray); --hover-bg: var(--hover-gray); }
+.button-primary { background-color: var(--bg-gray); color: var(--blue); --hover-bg: var(--hover-gray); }
 .button-secondary { background-color: var(--bg-blue); color: var(--on-blue); --hover-bg: var(--hover-blue); --hover-border: var(--on-blue); }
 .button-success { background-color: var(--bg-green); color: var(--on-green); --hover-bg: var(--hover-green); --hover-border: var(--on-green); } 
-.button-warning { background-color: var(--bg-yellow); color: var(--on-yellow); font-weight: var(--bold-500); --hover-bg: var(--hover-yellow); --hover-color: var(--on-dark); --hover-border: var(--on-dark); }
+.button-warning { background-color: var(--bg-yellow); color: var(--on-yellow); font-weight: var(--bold-500); --hover-bg: var(--hover-yellow); --hover-color: var(--white); --hover-border: var(--white); }
 .button-danger { background-color: var(--bg-red); color: var(--on-red); --hover-bg: var(--hover-red); --hover-border: var(--on-red); }
-.button-dark { background-color: var(--bg-dk-lead); color: var(--on-dark); border: 1px solid var(--bg-lead); --hover-bg: var(--bg-lead); --hover-border: var(--on-red); }
+.button-dark { background-color: var(--bg-dk-lead); color: var(--white); border: 1px solid var(--bg-lead); --hover-bg: var(--bg-lead); --hover-border: var(--on-red); }
 
 .button-disabled { 
   background-color: var(--bg-disabled);

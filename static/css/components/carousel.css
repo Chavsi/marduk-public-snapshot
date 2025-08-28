@@ -50,14 +50,14 @@
 
 .service-text p {
   font-size: var(--font-20);  /* o var(--font-lg) si quieres aún más destacado */
-  color: var(--on-white);   /* o el color que estés usando para textos */
+  color: var(--blue);   /* o el color que estés usando para textos */
   line-height: var(--line-height-normal);
 }
 
 .service-link {
   margin-top: var(--mg-8);
   align-self: flex-end;
-  color: var(--on-white);
+  color: var(--blue);
   font-size: var(--font-16);
   text-decoration: underline;
   transition: color 0.3s ease;

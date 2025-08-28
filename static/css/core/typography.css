@@ -61,12 +61,12 @@ p {
 }
 
 .text-muted {
-  color: var(--text-muted);
+  color: var(--muted);
   font-size: var(--font-16);
 }
 
 .text-disabled {
-  color: var(--text-disabled);
+  color: var(--disabled);
   font-size: var(--font-16);
 }
 

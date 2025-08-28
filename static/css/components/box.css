@@ -8,7 +8,7 @@
   align-items: center;
   padding: var(--pad-24);
   background: linear-gradient(to bottom, var(--bg-gray));
-  color: var(--on-white);
+  color: var(--blue);
   box-shadow: 0 2px 8px #313131;
   border-radius: var(--radius-8);     
   margin-top: var(--mg-0);
@@ -20,45 +20,45 @@
 }
 
 .box-title {
-  color: var(--on-white);
+  color: var(--blue);
 }
 
 .box-title-white {
-  color: var(--bg-white);
+  color: var(--white);
   margin-top: var(--mg-0);
 }
 
 .box-subtitle-white {
-  color: var(--bg-white);
+  color: var(--white);
   font-size: var(--font-18);
 }
 
 h3.box-title-white {
-  color: var(--bg-white);
+  color: var(--white);
   margin-top: var(--mg-0);
   margin-bottom: var(--mg-0);
 }
 
 h4.box-title-white {
-  color: var(--bg-white);
+  color: var(--white);
   margin-top: var(--mg-0);
   margin-bottom: var(--mg-0);
 }
 
 h5.box-title-white {
-  color: var(--bg-white);
+  color: var(--white);
   margin-top: var(--mg-0);
   margin-bottom: var(--mg-0);
 }
 
 h6.box-title-white {
-  color: var(--bg-white);
+  color: var(--white);
   margin-top: var(--mg-0);
   margin-bottom: var(--mg-0);
 }
 
 .box p {
-  color: var(--on-white);
+  color: var(--blue);
 }
 
 /* 🔹 Tamaños */
@@ -70,19 +70,19 @@ h6.box-title-white {
 .box.full  { width: 100%; }
 .box.autofit { width: fit-content; }
 
-.box.white { background: var(--bg-white); color: var(--on-white); }
-.box.white p { color: var(--on-white); }
+.box.white { background: var(--white); color: var(--blue); }
+.box.white p { color: var(--blue); }
 
-.box.blue { background: var(--bg-blue); color: var(--on-blue); }
-.box.blue p { color: var(--on-blue); }
-.box.blue a { color: var(--on-blue); }
+.box.blue { background: var(--blue); color: var(--white); }
+.box.blue p { color: var(--white); }
+.box.blue a { color: var(--white); }
 
-.box.dark { background: var(--bg-dk-lead); color: var(--on-dark); }
-.box.dark p { color: var(--on-dark); }
+.box.dark { background: var(--bg-dk-lead); color: var(--white); }
+.box.dark p { color: var(--white); }
 
-.box.silver { background: var(--bg-dk-diesel-deco); color: var(--on-blue); }
-.box.silver p { color: var(--on-blue); }
-.box.silver a { color: var(--on-blue); }
+.box.silver { background: var(--bg-dk-diesel-deco); color: var(--white); }
+.box.silver p { color: var(--white); }
+.box.silver a { color: var(--white); }
 
 
 

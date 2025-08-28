@@ -5,6 +5,8 @@
     --bg-black: #000000;
     --text-black: #000000;
 
+
+
     /* WHITE */
     --bg-white: #ffffff;
     --bg-white-deco: #C7E2FF;
@@ -20,7 +22,6 @@
     --bg-transparent: transparent;
     --hover-transparent: rgba(255, 255, 255, 0.05);
     --text-transparent: rgba(255, 255, 255, 0.05);
-    --on-transparent: #0360CA; /* ?????? */
 
     /* GRAY */
     --bg-gray: #e0e0e0;       /* PRIMARY BG */
@@ -173,8 +174,6 @@
     /* ✅ Text Colors */
     --text-input: #000000;
     --text-data: #000000;
-    --text-decorator: #CCCCCC;
-    --text-invert: #ffffff;
     --text-placeholder: #00000033;
 
     /* ✅ Text on color backgrounds */
@@ -182,7 +181,6 @@
     --on-flash: #000000;
 
     /* ✅ Borders & Shadows */
-    --border-color: #CCCCCC;
     --border-input: #000000;
     --box-shadow: 0rem 0.25rem 0.375rem #ffffff33;
 

@@ -12,7 +12,7 @@
 .catalog-title{
   font-weight: var(--bold-400);
   font-size: var(--font-18);
-  color: var(--on-dark);
+  color: var(--white);
   margin-bottom: var(--mg-12);
 }
 
@@ -31,7 +31,7 @@
   font-weight: var(--bold-400);
   margin-top: var(--mg-0);
   margin-bottom: var(--mg-0);
-  color: var(--on-dark);
+  color: var(--white);
 }
 
 .catalog-links ul {
@@ -49,7 +49,7 @@
   display: block;
   width: 100%;
   box-sizing: border-box;
-  color: var(--on-dark);
+  color: var(--white);
   font-weight: var(--bold-400);
   border-radius: var(--radius-8);
   padding: var(--pad-6x12);
@@ -64,6 +64,6 @@
   background-color: var(--bg-lead);       /* ajusta si tienes definida esa variable */
   color: var(--on-hover-dark);
   text-decoration: none;
-  color: var(--on-dark); 
+  color: var(--white); 
   border: 1px solid var(--bg-white);
 }
