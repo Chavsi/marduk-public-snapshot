@@ -53,7 +53,7 @@
           Login
         </a>    
         <a id="nav-register" href="{{ url_for('auth.register.register') }}" class="nav-button">
-          <img src="{{ url_for('static', filename='icons/pen-blue.svg') }}" alt="Registrarse" class="nav-icon">
+          {{ icons.icon('icon-pen', 'nav-icon') }}
           Registrarse
         </a>
       {% endif %}
