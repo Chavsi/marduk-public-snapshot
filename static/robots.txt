@@ -1,7 +1,0 @@
-Sitemap: https://www.compumasapp.com/sitemap.xml
-
-User-agent: *
-Allow: /info/bots-landing
-Allow: /md/
-Disallow: /auth/
-Disallow: /admin/
